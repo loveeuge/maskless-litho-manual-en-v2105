@@ -42,8 +42,8 @@ h2 { font-size:clamp(1.6rem,3vw,2.45rem); }
 .hero-actions .secondary-action { background:transparent; color:#d6fff9; border:1px solid rgba(52,198,176,.6); }
 .callout { margin:1rem 0; padding:.85rem 1rem; border-left:4px solid var(--accent); border-radius:7px; background:rgba(52,198,176,.08); color:#dfe9ef; }
 .callout.warn { border-left-color:var(--warn); background:rgba(245,186,105,.1); }
-.manual-figure { margin:1rem 0; padding:.7rem; border:1px solid var(--line); border-radius:10px; background:var(--panel); }
-.manual-figure img { display:block; width:100%; height:auto; border-radius:6px; background:#05080c; }
+.manual-figure { width:100%; max-width:min(100%,var(--figure-width,720px)); margin:1rem 0; padding:.7rem; border:1px solid var(--line); border-radius:10px; background:var(--panel); }
+.manual-figure img { display:block; width:100%; height:auto; max-height:680px; object-fit:contain; border-radius:6px; background:#05080c; }
 .manual-figure figcaption { margin-top:.55rem; color:var(--muted); font-size:.9rem; }
 .tabs { margin-top:1rem; overflow:hidden; border:1px solid var(--line); border-radius:10px; background:rgba(23,30,37,.76); }
 .tab-list { display:flex; overflow-x:auto; border-bottom:1px solid var(--line); background:#0d141b; }
@@ -85,7 +85,7 @@ tr:last-child td { border-bottom:0; }
     <div class="hero-actions"><a href="#quick-start">Start Here</a><a class="secondary-action" href="#release-notes">What Changed</a></div>
     <div class="callout"><strong>Important v2.0.10.5 change:</strong> <code>LED ON</code> is now a raw manual output. Use <code>Keystone Preview / Expose</code> when you need to preview output with the active UV Keystone profile applied.</div>
   </div>
-  <figure class="manual-figure"><img src="assets/img/main-window-v2_0_10_5.png" alt="The v2.0.10.5 main window. Pattern Settings now separates raw LED output from UV Keystone preview output." loading="lazy"><figcaption>The v2.0.10.5 main window. Pattern Settings now separates raw LED output from UV Keystone preview output.</figcaption></figure>
+  <figure class="manual-figure" style="--figure-width:750px"><img src="assets/img/main-window-v2_0_10_5.png" alt="The v2.0.10.5 main window. Pattern Settings now separates raw LED output from UV Keystone preview output." loading="lazy"><figcaption>The v2.0.10.5 main window. Pattern Settings now separates raw LED output from UV Keystone preview output.</figcaption></figure>
 </div>
         </section><section id="quick-start" class="manual-section">
           <div class="section-kicker">02</div>
@@ -150,7 +150,7 @@ dist\maskless_v2_0_10_5.exe</code></pre>
     <tr><td><code>Expose Setup</code></td><td>Create and run exposure sequence rows</td><td>Intensity columns change meaning when Calibration is enabled</td></tr>
   </tbody>
 </table></div>
-<figure class="manual-figure"><img src="assets/img/main-window-v2_0_10_5.png" alt="The full main window. Use this image as the current v2.0.10.5 reference." loading="lazy"><figcaption>The full main window. Use this image as the current v2.0.10.5 reference.</figcaption></figure>
+<figure class="manual-figure" style="--figure-width:750px"><img src="assets/img/main-window-v2_0_10_5.png" alt="The full main window. Use this image as the current v2.0.10.5 reference." loading="lazy"><figcaption>The full main window. Use this image as the current v2.0.10.5 reference.</figcaption></figure>
         </section><section id="pattern-settings" class="manual-section">
           <div class="section-kicker">06</div>
           <div class="section-title-row"><h2>Pattern Settings</h2></div>
@@ -163,7 +163,7 @@ dist\maskless_v2_0_10_5.exe</code></pre>
   <li><code>LED ON</code>: Raw manual output without UV Keystone correction.</li>
   <li><code>Keystone Preview / Expose</code>: Corrected output using the active UV Keystone profile.</li>
 </ul>
-<figure class="manual-figure"><img src="assets/img/pattern-settings-v2_0_10_5.png" alt="Pattern Settings in v2.0.10.5. The two output buttons have different meanings." loading="lazy"><figcaption>Pattern Settings in v2.0.10.5. The two output buttons have different meanings.</figcaption></figure></div><div class="tab-panel" id="pattern-settings-tab-1" role="tabpanel"><ol>
+<figure class="manual-figure" style="--figure-width:420px"><img src="assets/img/pattern-settings-v2_0_10_5.png" alt="Pattern Settings in v2.0.10.5. The two output buttons have different meanings." loading="lazy"><figcaption>Pattern Settings in v2.0.10.5. The two output buttons have different meanings.</figcaption></figure></div><div class="tab-panel" id="pattern-settings-tab-1" role="tabpanel"><ol>
   <li>Load the pattern with <code>Load image</code> or <code>Load GDS</code>.</li>
   <li>Confirm that the filename changes from <code>N/A</code> to the loaded file.</li>
   <li>Set rotation and intensity.</li>
@@ -203,7 +203,7 @@ dist\maskless_v2_0_10_5.exe</code></pre>
   <li><code>Draw CAD</code>: Open CAD View using the current aligned image plane.</li>
   <li>Move or resize the Align View window to match the microscope/camera image.</li>
 </ul>
-<figure class="manual-figure"><img src="assets/img/align-viewer-v2_0_10_5.png" alt="Align Viewer controls: Opacity, Show, and Draw CAD." loading="lazy"><figcaption>Align Viewer controls: Opacity, Show, and Draw CAD.</figcaption></figure></div><div class="tab-panel" id="align-viewer-tab-1" role="tabpanel"><ul>
+<figure class="manual-figure" style="--figure-width:420px"><img src="assets/img/align-viewer-v2_0_10_5.png" alt="Align Viewer controls: Opacity, Show, and Draw CAD." loading="lazy"><figcaption>Align Viewer controls: Opacity, Show, and Draw CAD.</figcaption></figure></div><div class="tab-panel" id="align-viewer-tab-1" role="tabpanel"><ul>
   <li>Align View aligns what the operator sees on screen.</li>
   <li>UV Keystone corrects the actual DLP output distortion.</li>
   <li>Draw CAD requires a loaded image, a configured DLP display, and Align View opened with <code>Show</code>.</li>
@@ -219,8 +219,8 @@ dist\maskless_v2_0_10_5.exe</code></pre>
   <li><code>Export</code>: Export the active profile for transfer or backup.</li>
   <li><code>Advanced</code>: Reveal manual 1/2/4-point Align View controls.</li>
 </ul>
-<figure class="manual-figure"><img src="assets/img/align-wizard-v2_0_10_5.png" alt="Align Wizard default view in v2.0.10.5." loading="lazy"><figcaption>Align Wizard default view in v2.0.10.5.</figcaption></figure></div><div class="tab-panel" id="align-wizard-tab-1" role="tabpanel"><p>Use Advanced only when you need semi-automatic screen alignment. Pick matching points on the microscope/camera view and Align View, press <code>Preview Calculate</code>, then press <code>Apply</code>.</p>
-<figure class="manual-figure"><img src="assets/img/align-wizard-advanced-v2_0_10_5.png" alt="Advanced mode with 1 Point, 2 Point, and 4 Point Keystone Align controls." loading="lazy"><figcaption>Advanced mode with 1 Point, 2 Point, and 4 Point Keystone Align controls.</figcaption></figure></div></div>
+<figure class="manual-figure" style="--figure-width:420px"><img src="assets/img/align-wizard-v2_0_10_5.png" alt="Align Wizard default view in v2.0.10.5." loading="lazy"><figcaption>Align Wizard default view in v2.0.10.5.</figcaption></figure></div><div class="tab-panel" id="align-wizard-tab-1" role="tabpanel"><p>Use Advanced only when you need semi-automatic screen alignment. Pick matching points on the microscope/camera view and Align View, press <code>Preview Calculate</code>, then press <code>Apply</code>.</p>
+<figure class="manual-figure" style="--figure-width:760px"><img src="assets/img/align-wizard-advanced-v2_0_10_5.png" alt="Advanced mode with 1 Point, 2 Point, and 4 Point Keystone Align controls." loading="lazy"><figcaption>Advanced mode with 1 Point, 2 Point, and 4 Point Keystone Align controls.</figcaption></figure></div></div>
         </section><section id="uv-keystone" class="manual-section">
           <div class="section-kicker">11</div>
           <div class="section-title-row"><h2>UV Keystone Calibration</h2></div>
@@ -232,14 +232,14 @@ dist\maskless_v2_0_10_5.exe</code></pre>
   <li>Each visible UV point is clicked four times on the microscope/camera screen.</li>
   <li>When finished, the software saves and activates a <code>.maskkeystone</code> profile.</li>
 </ul>
-<figure class="manual-figure"><img src="assets/img/uv-keystone-calibration-v2_0_10_5.png" alt="UV Keystone Calibration start screen." loading="lazy"><figcaption>UV Keystone Calibration start screen.</figcaption></figure></div><div class="tab-panel" id="uv-keystone-tab-1" role="tabpanel"><ol>
+<figure class="manual-figure" style="--figure-width:420px"><img src="assets/img/uv-keystone-calibration-v2_0_10_5.png" alt="UV Keystone Calibration start screen." loading="lazy"><figcaption>UV Keystone Calibration start screen.</figcaption></figure></div><div class="tab-panel" id="uv-keystone-tab-1" role="tabpanel"><ol>
   <li>Select the 1920 x 1080 DLP monitor in <code>Setting &gt; Display</code>.</li>
   <li>Open <code>Align Wizard &gt; UV Keystone Calibration</code>.</li>
   <li>Press <code>Start Calibration</code>.</li>
   <li>For each projected point, click the center of the visible UV point four times.</li>
   <li>After all 17 points, a corrected verification pattern is displayed on the DLP while LED output remains off for safety.</li>
 </ol>
-<figure class="manual-figure"><img src="assets/img/uv-keystone-progress-v2_0_10_5.png" alt="Calibration progress shows step, point number, and click count." loading="lazy"><figcaption>Calibration progress shows step, point number, and click count.</figcaption></figure></div><div class="tab-panel" id="uv-keystone-tab-2" role="tabpanel"><ul>
+<figure class="manual-figure" style="--figure-width:420px"><img src="assets/img/uv-keystone-progress-v2_0_10_5.png" alt="Calibration progress shows step, point number, and click count." loading="lazy"><figcaption>Calibration progress shows step, point number, and click count.</figcaption></figure></div><div class="tab-panel" id="uv-keystone-tab-2" role="tabpanel"><ul>
   <li><code>UV Keystone: NOT APPLIED | no profile</code>: no profile is available.</li>
   <li><code>UV Keystone: APPLIED (ON) | 1920x1080 | file.maskkeystone</code>: correction is enabled.</li>
   <li><code>UV Keystone: NOT APPLIED (OFF) | ...</code>: a profile exists, but correction is disabled.</li>
@@ -258,7 +258,7 @@ dist\maskless_v2_0_10_5.exe</code></pre>
   <li>Yellow rectangle: the DLP crop frame.</li>
   <li><code>Frame check</code>: confirms whether selected geometry is inside the frame and estimates visible pixel span.</li>
 </ul>
-<figure class="manual-figure"><img src="assets/img/gds-import-settings-v2_0_10_5.png" alt="GDS Import Settings with interactive crop frame and frame check." loading="lazy"><figcaption>GDS Import Settings with interactive crop frame and frame check.</figcaption></figure></div><div class="tab-panel" id="gds-import-tab-1" role="tabpanel"><ol>
+<figure class="manual-figure" style="--figure-width:620px"><img src="assets/img/gds-import-settings-v2_0_10_5.png" alt="GDS Import Settings with interactive crop frame and frame check." loading="lazy"><figcaption>GDS Import Settings with interactive crop frame and frame check.</figcaption></figure></div><div class="tab-panel" id="gds-import-tab-1" role="tabpanel"><ol>
   <li>Save the CAD scale profile for the current lens.</li>
   <li>Apply the DLP display in <code>Setting &gt; Display</code>.</li>
   <li>Press <code>Load GDS</code> and choose a .gds or .gds2 file.</li>
@@ -284,8 +284,8 @@ dist\maskless_v2_0_10_5.exe</code></pre>
   <li><code>Grid Snap</code>: snap points to a specified um grid.</li>
   <li><code>W um</code>, <code>H um</code>, <code>Stroke um</code>: define real-world size and line width.</li>
 </ul>
-<figure class="manual-figure"><img src="assets/img/draw-cad-view-v2_0_10_5.png" alt="CAD View uses the aligned camera image plane." loading="lazy"><figcaption>CAD View uses the aligned camera image plane.</figcaption></figure>
-<figure class="manual-figure"><img src="assets/img/draw-cad-tools-v2_0_10_5.png" alt="Draw CAD tools and dimension controls." loading="lazy"><figcaption>Draw CAD tools and dimension controls.</figcaption></figure></div><div class="tab-panel" id="draw-cad-tab-1" role="tabpanel"><ul>
+<figure class="manual-figure" style="--figure-width:672px"><img src="assets/img/draw-cad-view-v2_0_10_5.png" alt="CAD View uses the aligned camera image plane." loading="lazy"><figcaption>CAD View uses the aligned camera image plane.</figcaption></figure>
+<figure class="manual-figure" style="--figure-width:351px"><img src="assets/img/draw-cad-tools-v2_0_10_5.png" alt="Draw CAD tools and dimension controls." loading="lazy"><figcaption>Draw CAD tools and dimension controls.</figcaption></figure></div><div class="tab-panel" id="draw-cad-tab-1" role="tabpanel"><ul>
   <li>Load an image first.</li>
   <li>Apply the DLP display.</li>
   <li>Open Align View with <code>Show</code>.</li>
@@ -304,7 +304,7 @@ dist\maskless_v2_0_10_5.exe</code></pre>
   <li><code>Expose Now</code>: expose the current CAD result once after confirmation.</li>
   <li><code>Include Base Image</code>: render CAD geometry over the loaded base image.</li>
 </ul>
-<figure class="manual-figure"><img src="assets/img/draw-cad-output-controls-v2_0_10_5.png" alt="Draw CAD output controls, including Include Base Image and Expose Now." loading="lazy"><figcaption>Draw CAD output controls, including Include Base Image and Expose Now.</figcaption></figure>
+<figure class="manual-figure" style="--figure-width:351px"><img src="assets/img/draw-cad-output-controls-v2_0_10_5.png" alt="Draw CAD output controls, including Include Base Image and Expose Now." loading="lazy"><figcaption>Draw CAD output controls, including Include Base Image and Expose Now.</figcaption></figure>
         </section><section id="expose-setup" class="manual-section">
           <div class="section-kicker">15</div>
           <div class="section-title-row"><h2>Expose Setup</h2></div>
@@ -317,7 +317,7 @@ dist\maskless_v2_0_10_5.exe</code></pre>
   <li><code>Start</code>, <code>Next</code>, <code>Stop</code>: run, advance, or stop the sequence.</li>
   <li>Columns include File, Exposure (ms), Rotation (deg), Intensity, Rest (ms), and Repeat.</li>
 </ul>
-<figure class="manual-figure"><img src="assets/img/expose-setup-v2_0_10_5.png" alt="Expose Setup table and edit buttons." loading="lazy"><figcaption>Expose Setup table and edit buttons.</figcaption></figure></div><div class="tab-panel" id="expose-setup-tab-1" role="tabpanel"><ul>
+<figure class="manual-figure" style="--figure-width:760px"><img src="assets/img/expose-setup-v2_0_10_5.png" alt="Expose Setup table and edit buttons." loading="lazy"><figcaption>Expose Setup table and edit buttons.</figcaption></figure></div><div class="tab-panel" id="expose-setup-tab-1" role="tabpanel"><ul>
   <li>Re-check Exposure, Intensity, Repeat, and Rest before pressing <code>Start</code>.</li>
   <li>If UV Keystone correction fails, the software stops before LED ON instead of hiding the failure with a black fallback image.</li>
   <li>When the setup is locked during a run, press <code>Stop</code> before editing sequence rows.</li>
@@ -333,7 +333,7 @@ dist\maskless_v2_0_10_5.exe</code></pre>
   <li>Select the lens profile when the lens dropdown appears.</li>
   <li>Confirm that the intensity meaning in Pattern Settings and Expose Setup matches the Calibration state.</li>
 </ol>
-<figure class="manual-figure"><img src="assets/img/setting-expose-v2_0_10_5.png" alt="Setting > Expose contains Calibration, Compensation, and TEST Mode." loading="lazy"><figcaption>Setting > Expose contains Calibration, Compensation, and TEST Mode.</figcaption></figure>
+<figure class="manual-figure" style="--figure-width:500px"><img src="assets/img/setting-expose-v2_0_10_5.png" alt="Setting > Expose contains Calibration, Compensation, and TEST Mode." loading="lazy"><figcaption>Setting > Expose contains Calibration, Compensation, and TEST Mode.</figcaption></figure>
         </section><section id="compensation" class="manual-section">
           <div class="section-kicker">17</div>
           <div class="section-title-row"><h2>Compensation</h2></div>
@@ -348,7 +348,7 @@ dist\maskless_v2_0_10_5.exe</code></pre>
   <div class="section-kicker">18</div>
   <div class="section-title-row"><h2>Settings</h2></div>
   <p class="section-intro">Settings contains device controls, DLP display selection, Align View/UV Keystone controls, exposure calibration, compensation, and TEST Mode.</p>
-  <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" aria-selected="true" data-tab-target="settings-tab-0">General</button><button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="settings-tab-1">Display</button><button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="settings-tab-2">Align View</button><button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="settings-tab-3">Expose</button></div><div class="tab-panel active" id="settings-tab-0" role="tabpanel"><figure class="manual-figure"><img src="assets/img/setting-general-v2_0_10_5.png" alt="General tab: DLP Controller, Legacy PDC05, Power, Fan, and App Mode." loading="lazy"><figcaption>General tab: DLP Controller, Legacy PDC05, Power, Fan, and App Mode.</figcaption></figure></div><div class="tab-panel" id="settings-tab-1" role="tabpanel"><figure class="manual-figure"><img src="assets/img/setting-display-v2_0_10_5.png" alt="Display tab: choose the DLP monitor and press Apply." loading="lazy"><figcaption>Display tab: choose the DLP monitor and press Apply.</figcaption></figure></div><div class="tab-panel" id="settings-tab-2" role="tabpanel"><figure class="manual-figure"><img src="assets/img/setting-align-view-v2_0_10_5.png" alt="Align View tab: UV Keystone status plus Enable and Disable buttons." loading="lazy"><figcaption>Align View tab: UV Keystone status plus Enable and Disable buttons.</figcaption></figure></div><div class="tab-panel" id="settings-tab-3" role="tabpanel"><figure class="manual-figure"><img src="assets/img/setting-expose-v2_0_10_5.png" alt="Expose tab: Anti-vibration, Calibration, Compensation, and TEST Mode." loading="lazy"><figcaption>Expose tab: Anti-vibration, Calibration, Compensation, and TEST Mode.</figcaption></figure></div></div>
+  <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" aria-selected="true" data-tab-target="settings-tab-0">General</button><button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="settings-tab-1">Display</button><button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="settings-tab-2">Align View</button><button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="settings-tab-3">Expose</button></div><div class="tab-panel active" id="settings-tab-0" role="tabpanel"><figure class="manual-figure" style="--figure-width:500px"><img src="assets/img/setting-general-v2_0_10_5.png" alt="General tab: DLP Controller, Legacy PDC05, Power, Fan, and App Mode." loading="lazy"><figcaption>General tab: DLP Controller, Legacy PDC05, Power, Fan, and App Mode.</figcaption></figure></div><div class="tab-panel" id="settings-tab-1" role="tabpanel"><figure class="manual-figure" style="--figure-width:500px"><img src="assets/img/setting-display-v2_0_10_5.png" alt="Display tab: choose the DLP monitor and press Apply." loading="lazy"><figcaption>Display tab: choose the DLP monitor and press Apply.</figcaption></figure></div><div class="tab-panel" id="settings-tab-2" role="tabpanel"><figure class="manual-figure" style="--figure-width:500px"><img src="assets/img/setting-align-view-v2_0_10_5.png" alt="Align View tab: UV Keystone status plus Enable and Disable buttons." loading="lazy"><figcaption>Align View tab: UV Keystone status plus Enable and Disable buttons.</figcaption></figure></div><div class="tab-panel" id="settings-tab-3" role="tabpanel"><figure class="manual-figure" style="--figure-width:500px"><img src="assets/img/setting-expose-v2_0_10_5.png" alt="Expose tab: Anti-vibration, Calibration, Compensation, and TEST Mode." loading="lazy"><figcaption>Expose tab: Anti-vibration, Calibration, Compensation, and TEST Mode.</figcaption></figure></div></div>
 </section><section id="legacy-dlp" class="manual-section">
           <div class="section-kicker">19</div>
           <div class="section-title-row"><h2>Legacy DLP</h2></div>
