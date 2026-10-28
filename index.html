@@ -3,7 +3,7 @@
         <head>
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1">
-          <title>MASKLESS LITHO v2.1 English Manual</title>
+          <title>MASKLESS LITHO v2.1.5 English Manual</title>
           <link rel="icon" href="data:,">
           <style>
 :root { --bg:#07090d; --paper:#0f141a; --panel:#171e25; --panel2:#202933; --ink:#eef3f7; --muted:#aeb8c3; --line:#303b47; --accent:#34c6b0; --accent2:#6ea0ff; --warn:#f5ba69; }
@@ -11,9 +11,9 @@
 html { scroll-behavior:smooth; }
 body { margin:0; background:var(--bg); color:var(--ink); font-family:Inter,"Segoe UI",Arial,sans-serif; line-height:1.68; }
 a { color:inherit; }
-code { background:#090d13; border:1px solid var(--line); border-radius:5px; color:#d9fff7; font-family:"JetBrains Mono",Consolas,monospace; font-size:.92em; padding:.12rem .34rem; }
+code { overflow-wrap:anywhere; background:#090d13; border:1px solid var(--line); border-radius:5px; color:#d9fff7; font-family:"JetBrains Mono",Consolas,monospace; font-size:.92em; padding:.12rem .34rem; }
 pre { overflow:auto; padding:1rem; border:1px solid var(--line); border-radius:8px; background:#090d13; }
-pre code { border:0; background:transparent; padding:0; color:#eaf2ff; }
+pre code { overflow-wrap:normal; border:0; background:transparent; padding:0; color:#eaf2ff; }
 .layout { display:grid; grid-template-columns:292px minmax(0,1fr); min-height:100vh; }
 .sidebar { position:sticky; top:0; height:100vh; overflow:auto; padding:1.25rem 1rem; border-right:1px solid var(--line); background:#080c12; }
 .brand { margin-bottom:1.1rem; }
@@ -25,27 +25,27 @@ pre code { border:0; background:transparent; padding:0; color:#eaf2ff; }
 .nav span { color:#a9d9d2; font-family:Consolas,monospace; font-size:.78rem; min-width:1.2rem; }
 .mobile-nav { display:none; position:sticky; top:0; z-index:20; padding:.75rem; border-bottom:1px solid var(--line); background:#080c12; }
 .mobile-nav select { width:100%; padding:.75rem; border:1px solid var(--line); border-radius:8px; background:#111923; color:var(--ink); }
-.content { width:100%; max-width:1240px; padding:2rem clamp(1rem,3vw,3.25rem) 5rem; }
-.manual-section { scroll-margin-top:1rem; margin-bottom:4.2rem; padding-bottom:3.2rem; border-bottom:1px solid rgba(255,255,255,.08); }
-.section-kicker { margin-bottom:.3rem; color:#94d8cf; font-family:Consolas,monospace; font-size:.8rem; letter-spacing:.1em; }
+.content { min-width:0; width:100%; max-width:1240px; padding:2rem clamp(1rem,3vw,3.25rem) 5rem; }
+.manual-section { scroll-margin-top:5rem; margin-bottom:4.2rem; padding-bottom:3.2rem; border-bottom:1px solid rgba(255,255,255,.08); }
+.section-kicker { margin-bottom:.3rem; color:#94d8cf; font-family:Consolas,monospace; font-size:.8rem; letter-spacing:0; }
 .section-title-row { display:flex; align-items:center; flex-wrap:wrap; gap:.75rem; }
 h1,h2,h3 { margin:0 0 .75rem; line-height:1.18; letter-spacing:0; }
-h1 { font-size:clamp(2rem,4vw,3.8rem); max-width:800px; }
-h2 { font-size:clamp(1.6rem,3vw,2.45rem); }
+h1 { font-size:2.25rem; max-width:800px; }
+h2 { font-size:1.75rem; }
 .section-intro { max-width:940px; margin:.25rem 0 1.2rem; color:var(--muted); font-size:1.04rem; }
 .section-badge,.badges span { display:inline-flex; align-items:center; padding:.23rem .5rem; border:1px solid rgba(52,198,176,.45); border-radius:5px; background:rgba(52,198,176,.11); color:#c9fff7; font-size:.78rem; font-weight:700; }
 .hero-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(300px,590px); gap:1.25rem; align-items:start; }
-.hero-copy { padding:1.25rem; border:1px solid var(--line); border-radius:10px; background:linear-gradient(145deg,#141a21,#0d1218); }
+.hero-copy { padding:1.25rem; border:1px solid var(--line); border-radius:8px; background:linear-gradient(145deg,#141a21,#0d1218); }
 .badges { display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1rem; }
 .hero-actions { display:flex; gap:.7rem; flex-wrap:wrap; margin:1rem 0; }
 .hero-actions a { display:inline-flex; padding:.72rem 1rem; border-radius:6px; background:var(--accent); color:#06100f; font-weight:800; text-decoration:none; }
 .hero-actions .secondary-action { background:transparent; color:#d6fff9; border:1px solid rgba(52,198,176,.6); }
 .callout { margin:1rem 0; padding:.85rem 1rem; border-left:4px solid var(--accent); border-radius:7px; background:rgba(52,198,176,.08); color:#dfe9ef; }
 .callout.warn { border-left-color:var(--warn); background:rgba(245,186,105,.1); }
-.manual-figure { width:100%; max-width:min(100%,var(--figure-width,720px)); margin:1rem 0; padding:.7rem; border:1px solid var(--line); border-radius:10px; background:var(--panel); }
-.manual-figure img { display:block; width:100%; height:auto; max-height:680px; object-fit:contain; border-radius:6px; background:#05080c; }
+.manual-figure { width:100%; max-width:min(100%,var(--figure-width,720px)); margin:1rem 0; padding:.7rem; border:1px solid var(--line); border-radius:8px; background:var(--panel); }
+.manual-figure img { display:block; width:auto; max-width:100%; height:auto; max-height:680px; object-fit:contain; border-radius:6px; background:#05080c; }
 .manual-figure figcaption { margin-top:.55rem; color:var(--muted); font-size:.9rem; }
-.tabs { margin-top:1rem; overflow:hidden; border:1px solid var(--line); border-radius:10px; background:rgba(23,30,37,.76); }
+.tabs { margin-top:1rem; overflow:hidden; border:1px solid var(--line); border-radius:8px; background:rgba(23,30,37,.76); }
 .tab-list { display:flex; overflow-x:auto; border-bottom:1px solid var(--line); background:#0d141b; }
 .tab-button { appearance:none; border:0; border-right:1px solid var(--line); background:transparent; color:var(--muted); cursor:pointer; font-weight:800; padding:.82rem 1rem; white-space:nowrap; }
 .tab-button.active { background:#18242d; color:#fff; box-shadow:inset 0 -3px 0 var(--accent); }
@@ -59,381 +59,161 @@ th,td { padding:.72rem .78rem; border-bottom:1px solid var(--line); vertical-ali
 th { background:#121a22; color:#fff; text-align:left; }
 tr:last-child td { border-bottom:0; }
 @media (max-width:900px) { .layout{display:block;} .sidebar{display:none;} .mobile-nav{display:block;} .content{padding:1rem 1rem 4rem;} .hero-grid{grid-template-columns:1fr;} h1{font-size:2rem;} h2{font-size:1.55rem;} table{min-width:560px;} }
+@media print { .sidebar,.mobile-nav,.tab-list,.hero-actions{display:none;} .layout{display:block;} .tab-panel{display:block;} .content{max-width:none;padding:0;} body{background:white;color:black;} .manual-section{break-inside:auto;} }
 </style>
         </head>
         <body>
-          <div class="mobile-nav"><select id="mobileSelect"><option value="#home">01. Home</option><option value="#quick-start">02. Quick Start</option><option value="#safety">03. Safety</option><option value="#install-run">04. Install/Run</option><option value="#main-window">05. Main Window</option><option value="#pattern-settings">06. Pattern Settings</option><option value="#manual-led">07. Manual LED ON</option><option value="#motorized-focus">08. Motorized Focus</option><option value="#align-viewer">09. Align Viewer</option><option value="#align-wizard">10. Align Wizard</option><option value="#uv-keystone">11. UV Keystone</option><option value="#gds-import">12. GDS Import</option><option value="#draw-cad">13. Draw CAD</option><option value="#cad-output">14. CAD Output</option><option value="#expose-setup">15. Expose Setup</option><option value="#calibration-lut">16. Calibration LUT</option><option value="#compensation">17. Compensation</option><option value="#settings">18. Settings</option><option value="#legacy-dlp">19. Legacy DLP</option><option value="#test-mode">20. TEST Mode</option><option value="#data-paths">21. Data Paths</option><option value="#troubleshooting">22. Troubleshooting</option><option value="#release-notes">23. Release Notes</option></select></div>
+          <div class="mobile-nav"><select id="mobileSelect" aria-label="Sections"><option value="#home">01. Home</option><option value="#quick-start">02. Quick Start</option><option value="#safety">03. Safety</option><option value="#install-run">04. Install/Run</option><option value="#main-window">05. Main Window</option><option value="#display-safety">06. DLP Display / Apply</option><option value="#pattern-settings">07. Pattern Settings</option><option value="#manual-led">08. Manual LED ON</option><option value="#edition">09. Standard Edition</option><option value="#align-viewer">10. Align Viewer</option><option value="#align-wizard">11. Align Wizard</option><option value="#uv-keystone">12. UV Keystone</option><option value="#gds-import">13. GDS Import</option><option value="#draw-cad">14. Draw CAD</option><option value="#cad-output">15. CAD Output</option><option value="#expose-setup">16. Expose Setup</option><option value="#calibration-lut">17. Calibration LUT</option><option value="#compensation">18. Compensation</option><option value="#settings">19. Settings</option><option value="#legacy-dlp">20. Legacy DLP</option><option value="#test-mode">21. TEST Mode</option><option value="#data-paths">22. Data Paths</option><option value="#troubleshooting">23. Troubleshooting</option><option value="#release-notes">24. Release Notes</option></select></div>
           <div class="layout">
             <aside class="sidebar">
-              <div class="brand"><strong>MASKLESS LITHO Manual</strong><small>v2.1 English operator guide</small></div>
-              <nav class="nav"><a href="#home"><span>01</span>Home</a><a href="#quick-start"><span>02</span>Quick Start</a><a href="#safety"><span>03</span>Safety</a><a href="#install-run"><span>04</span>Install/Run</a><a href="#main-window"><span>05</span>Main Window</a><a href="#pattern-settings"><span>06</span>Pattern Settings</a><a href="#manual-led"><span>07</span>Manual LED ON</a><a href="#motorized-focus"><span>08</span>Motorized Focus</a><a href="#align-viewer"><span>09</span>Align Viewer</a><a href="#align-wizard"><span>10</span>Align Wizard</a><a href="#uv-keystone"><span>11</span>UV Keystone</a><a href="#gds-import"><span>12</span>GDS Import</a><a href="#draw-cad"><span>13</span>Draw CAD</a><a href="#cad-output"><span>14</span>CAD Output</a><a href="#expose-setup"><span>15</span>Expose Setup</a><a href="#calibration-lut"><span>16</span>Calibration LUT</a><a href="#compensation"><span>17</span>Compensation</a><a href="#settings"><span>18</span>Settings</a><a href="#legacy-dlp"><span>19</span>Legacy DLP</a><a href="#test-mode"><span>20</span>TEST Mode</a><a href="#data-paths"><span>21</span>Data Paths</a><a href="#troubleshooting"><span>22</span>Troubleshooting</a><a href="#release-notes"><span>23</span>Release Notes</a></nav>
+              <div class="brand"><strong>MASKLESS LITHO Manual</strong><small>v2.1.5 English operator guide</small></div>
+              <nav class="nav"><a href="#home"><span>01</span>Home</a><a href="#quick-start"><span>02</span>Quick Start</a><a href="#safety"><span>03</span>Safety</a><a href="#install-run"><span>04</span>Install/Run</a><a href="#main-window"><span>05</span>Main Window</a><a href="#display-safety"><span>06</span>DLP Display / Apply</a><a href="#pattern-settings"><span>07</span>Pattern Settings</a><a href="#manual-led"><span>08</span>Manual LED ON</a><a href="#edition"><span>09</span>Standard Edition</a><a href="#align-viewer"><span>10</span>Align Viewer</a><a href="#align-wizard"><span>11</span>Align Wizard</a><a href="#uv-keystone"><span>12</span>UV Keystone</a><a href="#gds-import"><span>13</span>GDS Import</a><a href="#draw-cad"><span>14</span>Draw CAD</a><a href="#cad-output"><span>15</span>CAD Output</a><a href="#expose-setup"><span>16</span>Expose Setup</a><a href="#calibration-lut"><span>17</span>Calibration LUT</a><a href="#compensation"><span>18</span>Compensation</a><a href="#settings"><span>19</span>Settings</a><a href="#legacy-dlp"><span>20</span>Legacy DLP</a><a href="#test-mode"><span>21</span>TEST Mode</a><a href="#data-paths"><span>22</span>Data Paths</a><a href="#troubleshooting"><span>23</span>Troubleshooting</a><a href="#release-notes"><span>24</span>Release Notes</a></nav>
             </aside>
             <main class="content"><section id="home" class="manual-section">
-          <div class="section-kicker">01</div>
-          <div class="section-title-row"><h2>MASKLESS LITHO v2.1</h2><span class="section-badge">English operator manual</span></div>
-          <p class="section-intro">A practical operator manual for PLANCK INC's MASKLESS LITHO Windows desktop software.</p>
-          <div class="hero-grid">
-  <div class="hero-copy">
-    <div class="badges">
-      <span>Build: maskless_v2_1.exe</span>
-      <span>Manual LED + UV Keystone</span>
-      <span>Interactive GDS Crop</span>
-      <span>Single EXE Focus Mode</span>
-    </div>
-    <h1>A clear, workflow-first manual for running MASKLESS LITHO.</h1>
-    <p>This English version is written from the current v2.1 codebase and the latest UI captures. It explains how to load images and GDS files, align the pattern, apply UV Keystone correction, draw CAD geometry, and run exposure sequences safely.</p>
-    <div class="hero-actions"><a href="#quick-start">Start Here</a><a class="secondary-action" href="#release-notes">What Changed</a></div>
-    <div class="callout"><strong>Important v2.1 change:</strong> <code>LED ON</code> automatically applies the active UV Keystone profile when the profile is <code>APPLIED (ON)</code>. If UV Keystone is disabled or no profile is loaded, it uses the raw image.</div>
-  </div>
-  <figure class="manual-figure" style="--figure-width:750px"><img src="assets/img/main-window-v2_1.png" alt="The v2.1 main window. Pattern Settings contains Load image, Load GDS, Image Rotation, Intensity, and LED ON." loading="lazy"><figcaption>The v2.1 main window. Pattern Settings contains Load image, Load GDS, Image Rotation, Intensity, and LED ON.</figcaption></figure>
-</div>
-        </section><section id="quick-start" class="manual-section">
-          <div class="section-kicker">02</div>
-          <div class="section-title-row"><h2>Quick Start</h2></div>
-          <p class="section-intro">Use this path for a first safe exposure. Confirm the DLP display, TEST Mode, and intensity before placing a real sample under UV output.</p>
-          <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" aria-selected="true" data-tab-target="quick-start-tab-0">First exposure</button><button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="quick-start-tab-1">Before pressing Start</button></div><div class="tab-panel active" id="quick-start-tab-0" role="tabpanel"><ol>
-  <li>Run <code>dist\maskless_v2_1.exe</code>.</li>
-  <li>Open <code>Setting &gt; Display</code>, select the DLP monitor, and press <code>Apply</code>.</li>
-  <li>For UI-only checks without hardware, enable <code>Setting &gt; Expose &gt; TEST Mode</code>. Before real exposure, verify that TEST Mode is in the intended state.</li>
-  <li>Load a pattern with <code>Load image</code>, or convert a layout with <code>Load GDS</code>.</li>
-  <li>Press <code>Align Viewer &gt; Show</code> and place the overlay on the microscope/camera view.</li>
-  <li>Use <code>Align Wizard</code> for camera-view alignment and <code>UV Keystone Calibration</code> for actual DLP output distortion correction.</li>
-  <li>If using UV Keystone, confirm that <code>Setting &gt; Align View</code> shows <code>APPLIED (ON)</code>.</li>
-  <li>Add the current pattern to <code>Expose Setup</code>, verify Exposure, Rotation, Intensity, Rest, and Repeat, then press <code>Start</code>.</li>
-</ol></div><div class="tab-panel" id="quick-start-tab-1" role="tabpanel"><ul>
-  <li>Confirm that the selected display is the DLP output, not the operator monitor.</li>
-  <li>Check whether intensity is in percent or in LUT-calibrated optical power units.</li>
-  <li>Check the UV Keystone status in <code>Setting &gt; Align View</code>.</li>
-  <li>If anything looks wrong, press <code>Stop</code> first and confirm that the DLP output returns to black.</li>
-</ul></div></div>
-        </section><section id="safety" class="manual-section">
-          <div class="section-kicker">03</div>
-          <div class="section-title-row"><h2>Safety</h2></div>
-          <p class="section-intro">UV and DLP output directly affects the sample and hardware. In v2.1, check manual LED output, sequence state, CAD exposure, and UV Keystone state before exposing a sample.</p>
-          <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" aria-selected="true" data-tab-target="safety-tab-0">Output rules</button><button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="safety-tab-1">Blocked states</button></div><div class="tab-panel active" id="safety-tab-0" role="tabpanel"><ul>
-  <li><code>LED ON</code> displays the current pattern on the DLP and starts manual LED output.</li>
-  <li>If UV Keystone is <code>APPLIED (ON)</code>, <code>LED ON</code> prepares the corrected image first. If correction fails, the LED is not started.</li>
-  <li>If UV Keystone is disabled or no profile is loaded, <code>LED ON</code> uses the raw image.</li>
-  <li><code>Start</code> sequences and <code>CAD Expose Now</code> clear manual output and run safety checks before controlled exposure.</li>
-  <li>In Anti-vibration mode, long manual LED output can trigger the 60-second overheat protection. Use only the time needed.</li>
-</ul></div><div class="tab-panel" id="safety-tab-1" role="tabpanel"><ul>
-  <li>Motorized Focus is blocked while a sequence is running, CAD Expose is running, or manual LED output is active.</li>
-  <li>GDS Import is blocked during a running sequence or while manual LED output is active.</li>
-  <li>Draw CAD requires a loaded image, a configured DLP display, and an open Align View.</li>
-  <li>UV Keystone Calibration requires the selected monitor to be 1920 x 1080.</li>
-</ul></div></div>
-        </section><section id="install-run" class="manual-section">
+  <div class="section-kicker">01</div>
+  <div class="section-title-row"><h2>MASKLESS LITHO v2.1.5</h2></div>
+  <p class="section-intro">Operator manual for the Windows standard edition of PLANCK INC's maskless lithography application.</p>
+  <div class="badges"><span>v2.1.5 Standard</span><span>1920 x 1080 / 100%</span><span>PNG / CAD / GDS</span></div><p>Executable: <code>maskless_v2_1_5.exe</code> / <code>maskless_v2_1_5_fast.exe</code></p><p>v2.1.5 strengthens Display Apply validation and adds first-projection confirmation for manual LED output. Motorized Focus is not included in the current standard edition.</p><div class="hero-actions"><a href="#quick-start">Quick Start</a><a class="secondary-action" href="https://github.com/PLANCK-INC/MASKLESSLITHO/releases/tag/v2.1.5">Official Release / Downloads</a></div><figure class="manual-figure" style="--figure-width:600px"><a href="assets/img/main-window-v2_1_5.png" target="_blank" rel="noopener" title="Open original image"><img src="assets/img/main-window-v2_1_5.png" alt="v2.1.5 UI in TEST Mode with a sample pattern. This is not evidence of a connected device or measured optical output." loading="lazy"></a><figcaption>v2.1.5 UI in TEST Mode with a sample pattern. This is not evidence of a connected device or measured optical output.</figcaption></figure>
+</section><section id="quick-start" class="manual-section">
+  <div class="section-kicker">02</div>
+  <div class="section-title-row"><h2>Quick Start</h2></div>
+  <p class="section-intro">Connect and initialize the device, select the display, load a pattern, align it, and run exposure.</p>
+  <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" id="quick-start-tab-0-button" aria-controls="quick-start-tab-0" tabindex="0" aria-selected="true" data-tab-target="quick-start-tab-0">First Exposure: 8 Steps</button><button class="tab-button" type="button" role="tab" id="quick-start-tab-1-button" aria-controls="quick-start-tab-1" tabindex="-1" aria-selected="false" data-tab-target="quick-start-tab-1">Before You Start</button></div><div class="tab-panel active" id="quick-start-tab-0" role="tabpanel" aria-labelledby="quick-start-tab-0-button"><ol><li>Check the device's USB control and DLP video connections, then run <code>maskless_v2_1_5.exe</code>.</li><li>For real exposure, turn off <code>Setting &gt; Expose &gt; TEST Mode</code> and press <code>Initialize</code>. Resolve any initialization failure before continuing.</li><li>Set the DLP to <code>1920x1080</code> and <code>100%</code> Windows scaling. Select the physical DLP under <code>Setting &gt; Display</code>, press <code>Apply</code>, and check the black output window.</li><li>Load a pattern with <code>Load image</code>. For GDS, first save the CAD scale for the current lens, then use <code>Load GDS</code>.</li><li>Use <code>Align Viewer &gt; Show</code> to align the overlay with the external microscope/camera image. Use <code>Align Wizard</code> when needed.</li><li>If using UV Keystone, verify <code>APPLIED (ON)</code> for a profile matching the current lens and DLP. Check the intensity unit and lens selection.</li><li>Press <code>Expose Setup &gt; Add</code> and check each row's Exposure, Rotation, Intensity, Rest, and Repeat. Manual <code>LED ON</code> is a separate operation, not a required step before Sequence.</li><li>Press <code>Start</code>. To interrupt, press <code>Stop</code> and check black output and the device state. For manual illumination, follow <a href="#manual-led">Manual LED ON</a>.</li></ol></div><div class="tab-panel" id="quick-start-tab-1" role="tabpanel" aria-labelledby="quick-start-tab-1-button"><ul><li>Distinguish the operator display from the DLP and keep video connections and Windows scaling stable during output.</li><li>UV may already be on while the first-projection dialog is open. Do not treat confirmation time as unexposed time.</li><li>TEST Mode does not validate real exposure or complete real-device first-projection confirmation.</li></ul></div></div>
+</section><section id="safety" class="manual-section">
+  <div class="section-kicker">03</div>
+  <div class="section-title-row"><h2>Safety</h2></div>
+  <p class="section-intro">Check output state and errors before proceeding.</p>
+  <ul><li>Follow the equipment's shielding and operating procedures. Check exposure duration, intensity, lens, and sample position first.</li><li>Black output is an image state. It does not replace LED OFF and zero-current confirmation. Do not begin another exposure while a safety error remains.</li><li><code>Display &gt; Apply</code> is blocked during exposure, manual LED preparation/output, and first-projection confirmation.</li><li>Anti-vibration turns the fan off and attempts LED ON about 500 ms later. Manual output has a 60-second overheat limit. Check fan recovery after stopping.</li><li>LED OFF, current reset, or fan recovery failures may trigger retries and block subsequent exposure. Resolve the warning even if the display is black.</li><li>On exit, active output and timers are stopped first. Exit may be blocked if output OFF cannot be confirmed. Canceling the CAD save prompt or failing to save keeps the editor open.</li></ul>
+</section><section id="install-run" class="manual-section">
           <div class="section-kicker">04</div>
           <div class="section-title-row"><h2>Install/Run</h2></div>
-          <p class="section-intro">Run the release executable for normal operation. Use the development commands only when working from source.</p>
-          <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" aria-selected="true" data-tab-target="install-run-tab-0">Release EXE</button><button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="install-run-tab-1">From source</button><button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="install-run-tab-2">Build and Focus</button></div><div class="tab-panel active" id="install-run-tab-0" role="tabpanel"><pre><code>cd C:\GitProjects\MASKLESSLITHO
-dist\maskless_v2_1.exe</code></pre>
-                    <p>The v2.1 release build is <code>maskless_v2_1.exe</code>. The release ZIP is expected to contain this single executable.</p></div><div class="tab-panel" id="install-run-tab-1" role="tabpanel"><pre><code>cd C:\GitProjects\MASKLESSLITHO
-.\venv64\Scripts\python.exe main.py</code></pre>
-                    <p>Install requirements first on a new PC. GDS Import requires <code>gdstk</code>.</p>
-                    <pre><code>python -m venv venv64
-.\venv64\Scripts\python.exe -m pip install -r requirements.txt</code></pre></div><div class="tab-panel" id="install-run-tab-2" role="tabpanel"><pre><code>.\venv64\Scripts\python.exe build_exe.py</code></pre>
-<p>Motorized Focus is launched through the same EXE in internal mode:</p>
-<pre><code>maskless_v2_1.exe --motorized-focus</code></pre></div></div>
+          <p class="section-intro">Choose a single executable or Fast Portable from the official release.</p>
+          <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" id="install-run-tab-0-button" aria-controls="install-run-tab-0" tabindex="0" aria-selected="true" data-tab-target="install-run-tab-0">Release Packages</button><button class="tab-button" type="button" role="tab" id="install-run-tab-1-button" aria-controls="install-run-tab-1" tabindex="-1" aria-selected="false" data-tab-target="install-run-tab-1">Development / Build</button></div><div class="tab-panel active" id="install-run-tab-0" role="tabpanel" aria-labelledby="install-run-tab-0-button"><ul><li>Download <code>maskless_v2_1_5.exe</code> from the <a href="https://github.com/PLANCK-INC/MASKLESSLITHO/releases/tag/v2.1.5">v2.1.5 release</a>. Alternatively, extract <code>maskless_v2_1_5.zip</code>.</li><li>For faster repeated launches, extract <code>maskless_v2_1_5_fast.zip</code> and run <code>maskless_v2_1_5_fast.exe</code> inside it. Keep the adjacent <code>_internal</code> folder.</li><li>Release packages do not require a separate Python or gdstk installation. Install device drivers as required by the manufacturer and use the existing external microscope-camera application.</li><li>Back up user settings, LUT, CAD scales, and Keystone profiles before upgrading. <code>SHA256SUMS.txt</code> provides release file integrity hashes.</li></ul></div><div class="tab-panel" id="install-run-tab-1" role="tabpanel" aria-labelledby="install-run-tab-1-button"><pre><code>cd C:\GitProjects\MASKLESSLITHO
+python -m venv venv64
+.\venv64\Scripts\python.exe -m pip install -r requirements.txt
+.\venv64\Scripts\python.exe main.py</code></pre><pre><code>.\venv64\Scripts\python.exe build_exe.py
+.\venv64\Scripts\python.exe build_exe_fast.py</code></pre><div class="callout"><code>requirements.txt</code> targets the standard edition. Focus source and libraries are not prerequisites for the standard app.</div></div></div>
         </section><section id="main-window" class="manual-section">
-          <div class="section-kicker">05</div>
-          <div class="section-title-row"><h2>Main Window</h2></div>
-          <p class="section-intro">The main window collects device initialization, pattern loading, alignment, CAD drawing, and exposure sequence controls in one vertical workflow.</p>
-          <div class="table-wrap"><table>
-  <thead><tr><th>Area</th><th>Purpose</th><th>What to verify in v2.1</th></tr></thead>
-  <tbody>
-    <tr><td><code>Setting</code></td><td>Device, display, alignment, exposure settings</td><td>DLP display, TEST Mode, UV Keystone Enable/Disable</td></tr>
-    <tr><td><code>Initialize</code></td><td>Power-on initialization for the DLP controller</td><td>Use TEST Mode when checking the UI without hardware</td></tr>
-    <tr><td><code>Motorized Focus</code></td><td>Launch the focus control window</td><td>Blocked during exposure or manual LED output</td></tr>
-    <tr><td><code>Pattern Settings</code></td><td>Load image/GDS, set rotation and intensity, run manual LED output</td><td><code>LED ON</code> uses corrected or raw output according to UV Keystone state</td></tr>
-    <tr><td><code>Align Viewer</code></td><td>Overlay the pattern on the microscope/camera image</td><td>Entry point for Draw CAD and alignment workflows</td></tr>
-    <tr><td><code>Expose Setup</code></td><td>Create and run exposure sequence rows</td><td>Intensity columns change meaning when Calibration is enabled</td></tr>
-  </tbody>
-</table></div>
-<figure class="manual-figure" style="--figure-width:750px"><img src="assets/img/main-window-v2_1.png" alt="The full main window. Use this image as the current v2.1 reference." loading="lazy"><figcaption>The full main window. Use this image as the current v2.1 reference.</figcaption></figure>
-        </section><section id="pattern-settings" class="manual-section">
-          <div class="section-kicker">06</div>
-          <div class="section-title-row"><h2>Pattern Settings</h2></div>
-          <p class="section-intro">Pattern Settings controls the current pattern image, rotation, intensity, and manual LED output.</p>
-          <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" aria-selected="true" data-tab-target="pattern-settings-tab-0">Controls</button><button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="pattern-settings-tab-1">Recommended use</button></div><div class="tab-panel active" id="pattern-settings-tab-0" role="tabpanel"><ul>
-  <li><code>Load image</code>: Load a PNG, BMP, or JPG pattern image.</li>
-  <li><code>Load GDS</code>: Convert a .gds or .gds2 layout into a DLP-ready PNG through GDS Import Settings.</li>
-  <li><code>Image Rotation (deg)</code>: Rotate the loaded pattern.</li>
-  <li><code>Intensity (%)</code>: Set DLP LED output intensity. With Calibration enabled, the UI can map this through a lens LUT.</li>
-  <li><code>LED ON</code>: Display the current pattern on the DLP and start manual LED output. If UV Keystone is <code>APPLIED (ON)</code>, the corrected image is used; otherwise the raw image is used.</li>
-  <li>When LED output is active, the button text changes to <code>LED OFF</code>. Press it again to stop output and restore a safe state.</li>
-</ul>
-<figure class="manual-figure" style="--figure-width:702px"><img src="assets/img/pattern-settings-v2_1.png" alt="Pattern Settings in v2.1. Use this capture to explain Load image, Load GDS, Image Rotation, Intensity, and LED ON." loading="lazy"><figcaption>Pattern Settings in v2.1. Use this capture to explain Load image, Load GDS, Image Rotation, Intensity, and LED ON.</figcaption></figure></div><div class="tab-panel" id="pattern-settings-tab-1" role="tabpanel"><ol>
-  <li>Load the pattern with <code>Load image</code> or <code>Load GDS</code>.</li>
-  <li>Confirm that the filename changes from <code>N/A</code> to the loaded file.</li>
-  <li>Set rotation and intensity.</li>
-  <li>Use <code>LED ON</code> for manual output. UV Keystone correction is controlled by <code>Setting &gt; Align View</code>.</li>
-</ol></div></div>
-        </section><section id="manual-led" class="manual-section">
-          <div class="section-kicker">07</div>
-          <div class="section-title-row"><h2>Manual LED ON</h2></div>
-          <p class="section-intro">Manual LED ON displays the current pattern on the DLP and starts manual LED output. In v2.1, UV Keystone handling and status timing were stabilized.</p>
-          <div class="table-wrap"><table>
-  <thead><tr><th>State</th><th>Output</th><th>Check before use</th><th>Failure behavior</th></tr></thead>
-  <tbody>
-    <tr><td><code>UV Keystone: APPLIED (ON)</code></td><td>Corrected image is prepared, displayed on the DLP, then LED output starts.</td><td>Profile resolution and DLP display selection</td><td>Stops before LED ON if correction fails</td></tr>
-    <tr><td><code>NOT APPLIED</code> or no profile</td><td>Raw loaded image is displayed on the DLP, then LED output starts.</td><td>Sample position, intensity, and TEST Mode state</td><td>Restores state if current setting or LED ON fails</td></tr>
-  </tbody>
-</table></div>
-<ul>
-  <li>Immediately after pressing the button, the status changes to <code>Status: Manual LED starting...</code>.</li>
-  <li>After LED ON succeeds, the status starts at <code>Status: Manual exposing... 0.000s</code> and updates every 0.1 seconds.</li>
-  <li>With Anti-vibration enabled, the fan is turned off first and LED ON is attempted about 500 ms later.</li>
-  <li>While manual LED output is active, conflict-prone actions such as Motorized Focus and GDS Import are blocked.</li>
-</ul>
-<div class="callout warn"><strong>Important:</strong> The v2.1 UI does not have a separate <code>Keystone Preview / Expose</code> button. UV Keystone correction is controlled from <code>Setting &gt; Align View</code> with the profile status and Enable/Disable buttons.</div>
-        </section><section id="motorized-focus" class="manual-section">
-          <div class="section-kicker">08</div>
-          <div class="section-title-row"><h2>Motorized Focus</h2></div>
-          <p class="section-intro">Motorized Focus is launched from the main window and still uses the single-EXE internal mode in v2.1.</p>
-          <ul>
-  <li>Location: the <code>Motorized Focus</code> button directly below <code>Initialize</code>.</li>
-  <li>Internal launch mode: <code>maskless_v2_1.exe --motorized-focus</code>.</li>
-  <li>No separate <code>Motorized_Focus.exe</code> is required for deployment.</li>
-  <li>Focus launch is blocked while sequence exposure, CAD exposure, or manual LED output is active.</li>
-  <li>If Focus is already running, the software reports that state instead of launching another copy.</li>
-</ul>
-        </section><section id="align-viewer" class="manual-section">
-          <div class="section-kicker">09</div>
-          <div class="section-title-row"><h2>Align Viewer</h2></div>
-          <p class="section-intro">Align Viewer places the pattern overlay on top of the microscope/camera view so the operator can align position, size, and transparency.</p>
-          <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" aria-selected="true" data-tab-target="align-viewer-tab-0">Controls</button><button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="align-viewer-tab-1">Important distinction</button></div><div class="tab-panel active" id="align-viewer-tab-0" role="tabpanel"><ul>
-  <li><code>Opacity</code>: Adjust overlay transparency.</li>
-  <li><code>Show</code>: Show or hide Align View.</li>
-  <li><code>Draw CAD</code>: Open CAD View using the current aligned image plane.</li>
-  <li>Move or resize the Align View window to match the microscope/camera image.</li>
-</ul>
-<figure class="manual-figure" style="--figure-width:420px"><img src="assets/img/align-viewer-v2_1.png" alt="Align Viewer controls: Opacity, Show, and Draw CAD." loading="lazy"><figcaption>Align Viewer controls: Opacity, Show, and Draw CAD.</figcaption></figure></div><div class="tab-panel" id="align-viewer-tab-1" role="tabpanel"><ul>
-  <li>Align View aligns what the operator sees on screen.</li>
-  <li>UV Keystone corrects the actual DLP output distortion.</li>
-  <li>Draw CAD requires a loaded image, a configured DLP display, and Align View opened with <code>Show</code>.</li>
-</ul></div></div>
-        </section><section id="align-wizard" class="manual-section">
-          <div class="section-kicker">10</div>
-          <div class="section-title-row"><h2>Align Wizard</h2></div>
-          <p class="section-intro">The v2.1 Align Wizard opens with UV Keystone profile controls first. Manual 1/2/4-point alignment is under Advanced.</p>
-          <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" aria-selected="true" data-tab-target="align-wizard-tab-0">Default view</button><button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="align-wizard-tab-1">Advanced controls</button></div><div class="tab-panel active" id="align-wizard-tab-0" role="tabpanel"><ul>
-  <li><code>UV Keystone Calibration</code>: Open the full-field calibration wizard.</li>
-  <li><code>KEYSTONE CALIBRATION</code>: Shows the current profile status.</li>
-  <li><code>Import</code>: Import and activate a <code>.maskkeystone</code> profile from another PC.</li>
-  <li><code>Export</code>: Export the active profile for transfer or backup.</li>
-  <li><code>Advanced</code>: Reveal manual 1/2/4-point Align View controls.</li>
-</ul>
-<figure class="manual-figure" style="--figure-width:471px"><img src="assets/img/align-wizard-v2_1.png" alt="Align Wizard default view in v2.1." loading="lazy"><figcaption>Align Wizard default view in v2.1.</figcaption></figure></div><div class="tab-panel" id="align-wizard-tab-1" role="tabpanel"><p>Use Advanced only when you need semi-automatic screen alignment. Pick matching points on the microscope/camera view and Align View, press <code>Preview Calculate</code>, then press <code>Apply</code>.</p>
-<figure class="manual-figure" style="--figure-width:760px"><img src="assets/img/align-wizard-advanced-v2_1.png" alt="Advanced mode with 1 Point, 2 Point, and 4 Point Keystone Align controls." loading="lazy"><figcaption>Advanced mode with 1 Point, 2 Point, and 4 Point Keystone Align controls.</figcaption></figure></div></div>
-        </section><section id="uv-keystone" class="manual-section">
-          <div class="section-kicker">11</div>
-          <div class="section-title-row"><h2>UV Keystone Calibration</h2></div>
-          <p class="section-intro">UV Keystone Calibration corrects the actual UV pattern projected through the DLP optical path. It is not the same as aligning the on-screen overlay.</p>
-          <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" aria-selected="true" data-tab-target="uv-keystone-tab-0">How it works</button><button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="uv-keystone-tab-1">Procedure</button><button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="uv-keystone-tab-2">Status text</button></div><div class="tab-panel active" id="uv-keystone-tab-0" role="tabpanel"><ul>
-  <li>Align View is not required.</li>
-  <li>Step 1/2 measures four outer points for global correction.</li>
-  <li>Step 2/2 measures the remaining thirteen fine points.</li>
-  <li>Each visible UV point is clicked four times on the microscope/camera screen.</li>
-  <li>When finished, the software saves and activates a <code>.maskkeystone</code> profile.</li>
-  <li>Before starting, the selected DLP monitor must be 1920 x 1080 native, and the main/camera monitor must match the DLP monitor native resolution.</li>
-</ul>
-<figure class="manual-figure" style="--figure-width:420px"><img src="assets/img/uv-keystone-calibration-v2_1.png" alt="UV Keystone Calibration start screen." loading="lazy"><figcaption>UV Keystone Calibration start screen.</figcaption></figure></div><div class="tab-panel" id="uv-keystone-tab-1" role="tabpanel"><ol>
-  <li>Select the 1920 x 1080 DLP monitor in <code>Setting &gt; Display</code>.</li>
-  <li>In Windows Display Settings, match the main/camera monitor and DLP monitor resolution and scaling.</li>
-  <li>Open <code>Align Wizard &gt; UV Keystone Calibration</code>.</li>
-  <li>Press <code>Start Calibration</code>.</li>
-  <li>For each projected point, click the center of the visible UV point four times.</li>
-  <li>After all 17 points, a corrected verification pattern is displayed on the DLP while LED output remains off for safety.</li>
-</ol>
-<figure class="manual-figure" style="--figure-width:420px"><img src="assets/img/uv-keystone-progress-v2_1.png" alt="Calibration progress shows step, point number, and click count." loading="lazy"><figcaption>Calibration progress shows step, point number, and click count.</figcaption></figure></div><div class="tab-panel" id="uv-keystone-tab-2" role="tabpanel"><ul>
-  <li><code>UV Keystone: NOT APPLIED | no profile</code>: no profile is available.</li>
-  <li><code>UV Keystone: APPLIED (ON) | 1920x1080 | file.maskkeystone</code>: correction is enabled.</li>
-  <li><code>UV Keystone: NOT APPLIED (OFF) | ...</code>: a profile exists, but correction is disabled.</li>
-  <li><code>Enable UV Keystone</code> turns the active profile on.</li>
-  <li><code>Disable UV Keystone</code> turns correction off without deleting the profile.</li>
-  <li>Manual <code>LED ON</code>, sequences, and CAD Expose Now use this state to decide whether correction is applied.</li>
-</ul></div></div>
-        </section><section id="gds-import" class="manual-section">
-          <div class="section-kicker">12</div>
-          <div class="section-title-row"><h2>GDS Import</h2></div>
-          <p class="section-intro">GDS Import now uses an interactive crop frame. The operator can choose exactly which real-size GDS area becomes the 1920 x 1080 DLP PNG.</p>
-          <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" aria-selected="true" data-tab-target="gds-import-tab-0">Reading the dialog</button><button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="gds-import-tab-1">Procedure</button><button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="gds-import-tab-2">Common messages</button></div><div class="tab-panel active" id="gds-import-tab-0" role="tabpanel"><ul>
-  <li><code>Cell</code> and <code>polygons</code>: the selected GDS cell and polygon count.</li>
-  <li><code>GDS bounds</code>, <code>GDS size</code>, and <code>center</code>: real layout dimensions.</li>
-  <li><code>DLP frame</code>: the physical size covered by the 1920 x 1080 DLP frame at the current CAD scale.</li>
-  <li>White rectangle: selected GDS bounds.</li>
-  <li>Yellow rectangle: the DLP crop frame.</li>
-  <li><code>Frame check</code>: confirms whether selected geometry is inside the frame and estimates visible pixel span.</li>
-</ul>
-<figure class="manual-figure" style="--figure-width:620px"><img src="assets/img/gds-import-settings-v2_1.png" alt="GDS Import Settings with interactive crop frame and frame check." loading="lazy"><figcaption>GDS Import Settings with interactive crop frame and frame check.</figcaption></figure></div><div class="tab-panel" id="gds-import-tab-1" role="tabpanel"><ol>
-  <li>Save the CAD scale profile for the current lens.</li>
-  <li>Apply the DLP display in <code>Setting &gt; Display</code>.</li>
-  <li>Press <code>Load GDS</code> and choose a .gds or .gds2 file.</li>
-  <li>Select the layer/datatype.</li>
-  <li>Drag the yellow frame, or type <code>Crop center X/Y (um)</code>.</li>
-  <li>Use <code>Zoom In</code>, <code>Zoom Out</code>, and <code>Fit View</code> to inspect the preview.</li>
-  <li>Use <code>Center Frame on GDS</code> to reset the frame to the selected layer center.</li>
-  <li>Press <code>OK</code> when Frame check confirms that geometry is inside the DLP frame.</li>
-</ol></div><div class="tab-panel" id="gds-import-tab-2" role="tabpanel"><ul>
-  <li><code>No selected GDS geometry inside the current DLP frame.</code>: move the yellow frame or change the crop center.</li>
-  <li><code>Geometry intersects the frame but may be smaller than one pixel.</code>: use a finer CAD scale.</li>
-  <li><code>Selected GDS geometry is outside the DLP area...</code>: check scale, origin, and crop center.</li>
-  <li><code>Selected GDS geometry produced no visible pixels.</code>: re-check layer/datatype, frame, and scale.</li>
-</ul></div></div>
-        </section><section id="draw-cad" class="manual-section">
-          <div class="section-kicker">13</div>
-          <div class="section-title-row"><h2>Draw CAD</h2></div>
-          <p class="section-intro">Draw CAD lets the operator create editable CAD geometry on the same image plane used by Align View.</p>
-          <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" aria-selected="true" data-tab-target="draw-cad-tab-0">Tools</button><button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="draw-cad-tab-1">Before output</button></div><div class="tab-panel active" id="draw-cad-tab-0" role="tabpanel"><ul>
-  <li><code>Select</code>: select, move, and edit shape handles.</li>
-  <li><code>Rect</code>, <code>Ellipse</code>, <code>Line</code>, <code>Polyline</code>, <code>Polygon</code>: create exposure geometry.</li>
-  <li><code>Measure</code>: measure distance and angle. Measurement marks are not exposed.</li>
-  <li><code>Grid Snap</code>: snap points to a specified um grid.</li>
-  <li><code>W um</code>, <code>H um</code>, <code>Stroke um</code>: define real-world size and line width.</li>
-</ul>
-<figure class="manual-figure" style="--figure-width:672px"><img src="assets/img/draw-cad-view-v2_1.png" alt="CAD View uses the aligned camera image plane." loading="lazy"><figcaption>CAD View uses the aligned camera image plane.</figcaption></figure>
-<figure class="manual-figure" style="--figure-width:351px"><img src="assets/img/draw-cad-tools-v2_1.png" alt="Draw CAD tools and dimension controls." loading="lazy"><figcaption>Draw CAD tools and dimension controls.</figcaption></figure></div><div class="tab-panel" id="draw-cad-tab-1" role="tabpanel"><ul>
-  <li>Load an image first.</li>
-  <li>Apply the DLP display.</li>
-  <li>Open Align View with <code>Show</code>.</li>
-  <li>Move Align View off the DLP display before drawing.</li>
-  <li>Save the scale for the current lens with <code>Save Scale</code>.</li>
-</ul></div></div>
-        </section><section id="cad-output" class="manual-section">
-          <div class="section-kicker">14</div>
-          <div class="section-title-row"><h2>CAD Output</h2></div>
-          <p class="section-intro">The lower Draw CAD controls save, export, apply, or expose the CAD result.</p>
-          <ul>
-  <li><code>Save CAD</code>: save an editable <code>.maskcad</code> document.</li>
-  <li><code>Load CAD</code>: reopen a saved <code>.maskcad</code> document.</li>
-  <li><code>Export PNG</code>: save a DLP-resolution PNG and paired <code>.maskcad</code>.</li>
-  <li><code>Apply</code>: load the rendered PNG into main Pattern Settings.</li>
-  <li><code>Expose Now</code>: expose the current CAD result once after confirmation.</li>
-  <li><code>Include Base Image</code>: render CAD geometry over the loaded base image.</li>
-</ul>
-<figure class="manual-figure" style="--figure-width:351px"><img src="assets/img/draw-cad-output-controls-v2_1.png" alt="Draw CAD output controls, including Include Base Image and Expose Now." loading="lazy"><figcaption>Draw CAD output controls, including Include Base Image and Expose Now.</figcaption></figure>
-        </section><section id="expose-setup" class="manual-section">
-          <div class="section-kicker">15</div>
-          <div class="section-title-row"><h2>Expose Setup</h2></div>
-          <p class="section-intro">Expose Setup builds the sequence table used for one or more exposure steps.</p>
-          <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" aria-selected="true" data-tab-target="expose-setup-tab-0">Controls</button><button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="expose-setup-tab-1">Safety notes</button></div><div class="tab-panel active" id="expose-setup-tab-0" role="tabpanel"><ul>
-  <li><code>Add</code>: add the current loaded pattern.</li>
-  <li><code>Delete</code>: remove the selected row.</li>
-  <li><code>Up</code> / <code>Down</code>: reorder rows.</li>
-  <li><code>Export</code>: export the sequence list.</li>
-  <li><code>Start</code>, <code>Next</code>, <code>Stop</code>: run, advance, or stop the sequence.</li>
-  <li>Columns include File, Exposure (ms), Rotation (deg), Intensity, Rest (ms), and Repeat.</li>
-</ul>
-<figure class="manual-figure" style="--figure-width:760px"><img src="assets/img/expose-setup-v2_1.png" alt="Expose Setup table and edit buttons." loading="lazy"><figcaption>Expose Setup table and edit buttons.</figcaption></figure></div><div class="tab-panel" id="expose-setup-tab-1" role="tabpanel"><ul>
-  <li>Re-check Exposure, Intensity, Repeat, and Rest before pressing <code>Start</code>.</li>
-  <li>If UV Keystone correction fails, the software stops before LED ON instead of hiding the failure with a black fallback image.</li>
-  <li>When the setup is locked during a run, press <code>Stop</code> before editing sequence rows.</li>
-</ul></div></div>
-        </section><section id="calibration-lut" class="manual-section">
-          <div class="section-kicker">16</div>
-          <div class="section-title-row"><h2>Calibration LUT</h2></div>
-          <p class="section-intro">Calibration LUT maps intensity input through a lens-specific calibration table.</p>
-          <ol>
-  <li>Open <code>Setting &gt; Expose</code>.</li>
-  <li>Press <code>Load</code> to load the LUT file.</li>
-  <li>Enable <code>Calibration</code>.</li>
-  <li>Select the lens profile when the lens dropdown appears.</li>
-  <li>Confirm that the intensity meaning in Pattern Settings and Expose Setup matches the Calibration state.</li>
-</ol>
-<figure class="manual-figure" style="--figure-width:500px"><img src="assets/img/setting-expose-v2_1.png" alt="Setting > Expose contains Calibration, Compensation, and TEST Mode." loading="lazy"><figcaption>Setting > Expose contains Calibration, Compensation, and TEST Mode.</figcaption></figure>
-        </section><section id="compensation" class="manual-section">
-          <div class="section-kicker">17</div>
-          <div class="section-title-row"><h2>Compensation</h2></div>
-          <p class="section-intro">Compensation applies a loaded mask image to the output. It is separate from LUT calibration and UV Keystone correction.</p>
-          <ul>
-  <li>Location: <code>Setting &gt; Expose</code>.</li>
-  <li><code>Compensation</code>: enable or disable the loaded compensation mask.</li>
-  <li><code>Load</code>: load a <code>.mask</code> compensation image.</li>
-  <li>Calibration changes intensity mapping, Compensation changes the image, and UV Keystone changes geometric output correction.</li>
-</ul>
-        </section><section id="settings" class="manual-section">
+  <div class="section-kicker">05</div>
+  <div class="section-title-row"><h2>Main Window</h2></div>
+  <p class="section-intro">The main window connects device initialization, pattern input, alignment, and exposure.</p>
+  <div class="table-wrap"><table><thead><tr><th>Area</th><th>Purpose / Checks</th></tr></thead><tbody><tr><td>Setting</td><td>Controller, display, Align View, exposure correction, TEST Mode</td></tr><tr><td>Initialize</td><td>Initialize device power; resolve failures before exposure</td></tr><tr><td>Pattern Settings</td><td>Image/GDS loading, rotation, intensity, manual LED</td></tr><tr><td>Align Viewer</td><td>Show, Opacity, Draw CAD</td></tr><tr><td>Expose Setup</td><td>Sequence rows and parameters, Start / Next / Stop</td></tr></tbody></table></div><figure class="manual-figure" style="--figure-width:600px"><a href="assets/img/main-window-v2_1_5.png" target="_blank" rel="noopener" title="Open original image"><img src="assets/img/main-window-v2_1_5.png" alt="v2.1.5 standard-edition main window. There is no Motorized Focus button." loading="lazy"></a><figcaption>v2.1.5 standard-edition main window. There is no Motorized Focus button.</figcaption></figure>
+</section><section id="display-safety" class="manual-section">
+  <div class="section-kicker">06</div>
+  <div class="section-title-row"><h2>DLP Display / Apply</h2></div>
+  <p class="section-intro">Display selection and black-output validation in v2.1.5.</p>
+  <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" id="display-safety-tab-0-button" aria-controls="display-safety-tab-0" tabindex="0" aria-selected="true" data-tab-target="display-safety-tab-0">Select / Apply</button><button class="tab-button" type="button" role="tab" id="display-safety-tab-1-button" aria-controls="display-safety-tab-1" tabindex="-1" aria-selected="false" data-tab-target="display-safety-tab-1">Errors / Recovery</button></div><div class="tab-panel active" id="display-safety-tab-0" role="tabpanel" aria-labelledby="display-safety-tab-0-button"><ol><li>Initialize the device, stop all output, and check <code>1920x1080</code> resolution and <code>100%</code> Windows scaling for the DLP.</li><li>Select the physical DLP in <code>Setting &gt; Display &gt; Connected Monitor List</code>. Selecting the combo box alone does not change output.</li><li>Press <code>Apply</code>. The app keeps the existing black cover while checking LED OFF, current zero, and current readback.</li><li>A valid output window is reused for the same display. For another display, the new black output window's screen, resolution, scaling, and coverage are validated before saving selection.</li><li>Check black output and the current-monitor label before continuing. Apply itself does not project a pattern, switch the LED on, or start exposure.</li></ol><figure class="manual-figure" style="--figure-width:400px"><a href="assets/img/setting-display-v2_1_5.png" target="_blank" rel="noopener" title="Open original image"><img src="assets/img/setting-display-v2_1_5.png" alt="Actual Display tab. Select the equipment PC&#x27;s physical DLP, not a monitor based only on this example." loading="lazy"></a><figcaption>Actual Display tab. Select the equipment PC's physical DLP, not a monitor based only on this example.</figcaption></figure></div><div class="tab-panel" id="display-safety-tab-1" role="tabpanel" aria-labelledby="display-safety-tab-1-button"><ul><li><code>Stop exposure, LED preparation and manual LED output before changing the display.</code>: finish output with Stop or LED OFF / Cancel first.</li><li><code>LED OFF/current 0 could not be confirmed.</code>: selection is not saved. Check USB, the controller, and status; resolve the OFF failure.</li><li>Disconnection, resolution/scaling changes, or a hidden, minimized, or deleted output window can block LED output or request safety cleanup.</li><li>After restoring connections and Windows settings, revalidate with Display Apply. A missing or ambiguous saved display does not cause output to an arbitrary monitor.</li></ul></div></div>
+</section><section id="pattern-settings" class="manual-section">
+  <div class="section-kicker">07</div>
+  <div class="section-title-row"><h2>Pattern Settings</h2></div>
+  <p class="section-intro">Set the pattern, rotation, intensity, and manual illumination.</p>
+  <ul><li><code>Load image</code>: load a supported image such as PNG/BMP/JPG. Check the filename and DLP resolution.</li><li><code>Load GDS</code>: select a layer/datatype and crop frame from GDS/GDS2 and convert it to a monochrome DLP PNG.</li><li><code>Image Rotation (deg)</code>: pattern rotation. After adding a sequence row, also check that row's Rotation.</li><li><code>Intensity</code>: check percent units when LUT is off, or the selected lens's calibrated irradiance units when enabled.</li><li><code>LED ON</code>: manually output the current pattern after readiness checks. The button shows <code>Preparing LED... (Cancel)</code> during preparation and <code>LED OFF</code> after the ON command succeeds.</li></ul><figure class="manual-figure" style="--figure-width:258px"><a href="assets/img/pattern-settings-v2_1_5.png" target="_blank" rel="noopener" title="Open original image"><img src="assets/img/pattern-settings-v2_1_5.png" alt="Default Pattern Settings state. The next section covers preparation and the first-projection dialog." loading="lazy"></a><figcaption>Default Pattern Settings state. The next section covers preparation and the first-projection dialog.</figcaption></figure>
+</section><section id="manual-led" class="manual-section">
+  <div class="section-kicker">08</div>
+  <div class="section-title-row"><h2>Manual LED ON</h2></div>
+  <p class="section-intro">For the first manual illumination, confirm after the pattern appears in the microscope camera.</p>
+  <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" id="manual-led-tab-0-button" aria-controls="manual-led-tab-0" tabindex="0" aria-selected="true" data-tab-target="manual-led-tab-0">Prepare / First Projection</button><button class="tab-button" type="button" role="tab" id="manual-led-tab-1-button" aria-controls="manual-led-tab-1" tabindex="-1" aria-selected="false" data-tab-target="manual-led-tab-1">Cancel / Status</button><button class="tab-button" type="button" role="tab" id="manual-led-tab-2-button" aria-controls="manual-led-tab-2" tabindex="-1" aria-selected="false" data-tab-target="manual-led-tab-2">Output Correction</button></div><div class="tab-panel active" id="manual-led-tab-0" role="tabpanel" aria-labelledby="manual-led-tab-0-button"><ol><li>Check the image, initialization, Display Apply, intensity, and UV Keystone state; press <code>LED ON</code>.</li><li>The central <code>DLP LED startup</code> dialog shows <code>Preparing DLP. Please wait...</code>. USB connection, readiness, LED OFF, and matching current readback are checked.</li><li>Preparation has a software deadline of up to 5 seconds. With Anti-vibration, device state and current are checked again after the fan delay, immediately before ON.</li><li>After the first ON command succeeds, the dialog stays open with <code>Waiting for the first projection. Please wait...</code>. Press <code>Pattern visible</code> only when the pattern appears in the microscope camera.</li><li>Confirmation rechecks connection, readiness, current, and the live output window. Later ON operations in the same initialization session do not require confirmation or a fixed 10-second wait.</li></ol><figure class="manual-figure" style="--figure-width:380px"><a href="assets/img/manual-led-preparing-v2_1_5.png" target="_blank" rel="noopener" title="Open original image"><img src="assets/img/manual-led-preparing-v2_1_5.png" alt="Real preparation dialog UI rendered as an example without issuing device commands." loading="lazy"></a><figcaption>Real preparation dialog UI rendered as an example without issuing device commands.</figcaption></figure><figure class="manual-figure" style="--figure-width:380px"><a href="assets/img/manual-led-confirm-v2_1_5.png" target="_blank" rel="noopener" title="Open original image"><img src="assets/img/manual-led-confirm-v2_1_5.png" alt="Example first-projection confirmation state. Select Pattern visible after checking the actual camera pattern." loading="lazy"></a><figcaption>Example first-projection confirmation state. Select Pattern visible after checking the actual camera pattern.</figcaption></figure></div><div class="tab-panel" id="manual-led-tab-1" role="tabpanel" aria-labelledby="manual-led-tab-1-button"><ul><li><code>LED OFF / Cancel</code>, Esc, and closing the dialog request LED OFF, zero current, and black output. Pressing the main button again during preparation also cancels.</li><li>If confirmation is not received within 30 seconds after the first ON response, shutdown is requested automatically. Light may already be on during this interval.</li><li><code>Manual exposing...</code> elapsed time follows the ON-command response; it does not automatically measure optical onset or dose.</li><li>Reinitialization or changes to device, controller, or display state require first-projection confirmation again. TEST Mode does not record real-device confirmation.</li><li>A slow or stuck native DLL call can delay UI and cancellation until it returns. Late success is rejected and safety shutdown is requested.</li></ul></div><div class="tab-panel" id="manual-led-tab-2" role="tabpanel" aria-labelledby="manual-led-tab-2-button"><ul><li><code>APPLIED (ON)</code>: correct the image with a compatible Keystone profile for the current lens/DLP. Validation or generation failure stops illumination.</li><li><code>NOT APPLIED</code> / no profile: output without UV Keystone correction. Enabled Compensation still applies separately.</li><li>An unreadable enabled Compensation file produces a warning rather than silently falling back to an uncorrected image.</li></ul></div></div>
+</section><section id="edition" class="manual-section">
+  <div class="section-kicker">09</div>
+  <div class="section-title-row"><h2>Standard Edition</h2></div>
+  <p class="section-intro">Standard-edition scope and the Motorized Focus change.</p>
+  <span id="motorized-focus"></span><ul><li>The Motorized Focus button and embedded launcher were removed from the standard edition in v2.1.4 and remain absent in v2.1.5.</li><li>The standard release rejects <code>--motorized-focus</code> with exit code 2. Do not use the embedded-mode instructions from older manuals.</li><li>Neither the single executable nor Fast Portable includes Focus source, ToupCam SDK, OpenCV, or motor communication libraries. Pro availability is a future plan, not a current released feature.</li><li>PNG, Draw CAD, GDS, UV Keystone, and Modern/Legacy DLP remain available. Draw CAD loads its editor when first opened.</li></ul>
+</section><section id="align-viewer" class="manual-section">
+  <div class="section-kicker">10</div>
+  <div class="section-title-row"><h2>Align Viewer</h2></div>
+  <p class="section-intro">Overlay the pattern on the external camera image.</p>
+  <ul><li>Toggle visibility with <code>Show</code> and adjust transparency with <code>Opacity</code>.</li><li>Move and resize the overlay on the operator display. Manage position, size, rotation, and Reset Align in Setting > Align View.</li><li>Overlay alignment and actual DLP UV Keystone correction are separate. A visually aligned overlay does not establish that DLP distortion is corrected.</li><li><code>Draw CAD</code> opens on the current Align View image plane. Keep editing windows off the DLP display.</li></ul><figure class="manual-figure" style="--figure-width:183px"><a href="assets/img/align-viewer-v2_1_5.png" target="_blank" rel="noopener" title="Open original image"><img src="assets/img/align-viewer-v2_1_5.png" alt="Align Viewer controls." loading="lazy"></a><figcaption>Align Viewer controls.</figcaption></figure>
+</section><section id="align-wizard" class="manual-section">
+  <div class="section-kicker">11</div>
+  <div class="section-title-row"><h2>Align Wizard</h2></div>
+  <p class="section-intro">Entry point for UV Keystone measurement and manual 1/2/4 Point Align.</p>
+  <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" id="align-wizard-tab-0-button" aria-controls="align-wizard-tab-0" tabindex="0" aria-selected="true" data-tab-target="align-wizard-tab-0">Main Controls</button><button class="tab-button" type="button" role="tab" id="align-wizard-tab-1-button" aria-controls="align-wizard-tab-1" tabindex="-1" aria-selected="false" data-tab-target="align-wizard-tab-1">Advanced</button></div><div class="tab-panel active" id="align-wizard-tab-0" role="tabpanel" aria-labelledby="align-wizard-tab-0-button"><ul><li>Open <code>Setting &gt; Align View &gt; Align Wizard</code>. Check UV Keystone Calibration, status, Import, and Export.</li><li><code>Import</code> loads a .maskkeystone profile subject to lens, DLP identity, and resolution compatibility checks. It does not make every other device's profile usable.</li><li><code>Export</code> saves the current profile. A lens, device, or display change may require recalibration.</li></ul><figure class="manual-figure" style="--figure-width:247px"><a href="assets/img/align-wizard-v2_1_5.png" target="_blank" rel="noopener" title="Open original image"><img src="assets/img/align-wizard-v2_1_5.png" alt="Align Wizard main controls." loading="lazy"></a><figcaption>Align Wizard main controls.</figcaption></figure></div><div class="tab-panel" id="align-wizard-tab-1" role="tabpanel" aria-labelledby="align-wizard-tab-1-button"><ul><li>Expand <code>Advanced</code> to select manual alignment. Use 1 Point for translation, 2 Point for translation/scale/rotation, and 4 Point for perspective alignment.</li><li>Pick corresponding reference points in the camera image and Align View in the same order, inspect <code>Preview Calculate</code>, then <code>Apply</code>.</li><li>Check point order and rotation during repeated alignment. Reset Align resets overlay alignment; it is separate from enabling/disabling a Keystone profile.</li></ul><figure class="manual-figure" style="--figure-width:631px"><a href="assets/img/align-wizard-advanced-v2_1_5.png" target="_blank" rel="noopener" title="Open original image"><img src="assets/img/align-wizard-advanced-v2_1_5.png" alt="Advanced manual-alignment controls." loading="lazy"></a><figcaption>Advanced manual-alignment controls.</figcaption></figure></div></div>
+</section><section id="uv-keystone" class="manual-section">
+  <div class="section-kicker">12</div>
+  <div class="section-title-row"><h2>UV Keystone Calibration</h2></div>
+  <p class="section-intro">Perform four-point global correction and 17-point full-field measurement in one workflow.</p>
+  <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" id="uv-keystone-tab-0-button" aria-controls="uv-keystone-tab-0" tabindex="0" aria-selected="true" data-tab-target="uv-keystone-tab-0">Prepare / Measure</button><button class="tab-button" type="button" role="tab" id="uv-keystone-tab-1-button" aria-controls="uv-keystone-tab-1" tabindex="-1" aria-selected="false" data-tab-target="uv-keystone-tab-1">Apply a Profile</button></div><div class="tab-panel active" id="uv-keystone-tab-0" role="tabpanel" aria-labelledby="uv-keystone-tab-0-button"><ol><li>Complete Initialize and Display Apply. DLP must be native 1920x1080 at 100% scaling. Check the required native-resolution match between the camera/main display and DLP.</li><li>Check the current lens and select <code>Align Wizard &gt; UV Keystone Calibration &gt; Start Calibration</code>. Align View need not be open.</li><li>Measure the four outer points in Step 1/2 and the remaining 13 points in Step 2/2. Click the center of each visible UV reference point four times.</li><li>Each measurement has a 60-second limit. Cancel stops measurement. Failure to confirm LED OFF prevents profile saving and success reporting.</li><li>On completion, check the saved .maskkeystone and application state. The correction-verification pattern is displayed with LED output off, so its display alone is not optical verification.</li></ol><figure class="manual-figure" style="--figure-width:302px"><a href="assets/img/uv-keystone-calibration-v2_1_5.png" target="_blank" rel="noopener" title="Open original image"><img src="assets/img/uv-keystone-calibration-v2_1_5.png" alt="UV Keystone startup dialog." loading="lazy"></a><figcaption>UV Keystone startup dialog.</figcaption></figure><figure class="manual-figure" style="--figure-width:302px"><a href="assets/img/uv-keystone-progress-v2_1_5.png" target="_blank" rel="noopener" title="Open original image"><img src="assets/img/uv-keystone-progress-v2_1_5.png" alt="Illustrated progress message, not the result of a physical UV measurement." loading="lazy"></a><figcaption>Illustrated progress message, not the result of a physical UV measurement.</figcaption></figure></div><div class="tab-panel" id="uv-keystone-tab-1" role="tabpanel" aria-labelledby="uv-keystone-tab-1-button"><ul><li><code>APPLIED (ON)</code>: correction enabled. <code>NOT APPLIED (OFF)</code>: profile retained but disabled. <code>no profile</code>: no available profile.</li><li><code>Enable UV Keystone</code> / <code>Disable UV Keystone</code> in Setting > Align View toggle application without deleting the profile.</li><li>Profiles retain lens, DLP identity, and resolution. Incompatible profiles are warned and blocked; checks also apply to manual LED, Sequence, and CAD Expose Now.</li></ul></div></div>
+</section><section id="gds-import" class="manual-section">
+  <div class="section-kicker">13</div>
+  <div class="section-title-row"><h2>GDS Import</h2></div>
+  <p class="section-intro">Convert the selected layer to a monochrome PNG for the DLP area, not editable CAD objects.</p>
+  <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" id="gds-import-tab-0-button" aria-controls="gds-import-tab-0" tabindex="0" aria-selected="true" data-tab-target="gds-import-tab-0">Workflow</button><button class="tab-button" type="button" role="tab" id="gds-import-tab-1-button" aria-controls="gds-import-tab-1" tabindex="-1" aria-selected="false" data-tab-target="gds-import-tab-1">Messages / Fixes</button></div><div class="tab-panel active" id="gds-import-tab-0" role="tabpanel" aria-labelledby="gds-import-tab-0-button"><ol><li>Save the current lens's CAD scale profile and complete DLP Display Apply.</li><li>Open a .gds or .gds2 with Load GDS and select a layer/datatype. Bounds, preview, and Frame check update with selection.</li><li>White shapes are the selected GDS geometry; the yellow rectangular frame is the DLP crop area. Drag the frame or enter Crop center X/Y (um).</li><li>Adjust the preview with the wheel, Zoom In/Out, and Fit View. Center Frame on GDS moves the frame to the selected layer center. Preview zoom does not change CAD scale.</li><li>Check actual pixel presence with Frame check, then press OK to convert. Other LED/exposure/CAD/Keystone output is blocked during conversion.</li><li>Inspect the resulting PNG, then use Add > Start. Late results from canceled work are not applied.</li></ol><figure class="manual-figure" style="--figure-width:496px"><a href="assets/img/gds-import-settings-v2_1_5.png" target="_blank" rel="noopener" title="Open original image"><img src="assets/img/gds-import-settings-v2_1_5.png" alt="Screenshot from a parsed sample GDS showing white geometry and the yellow DLP crop frame." loading="lazy"></a><figcaption>Screenshot from a parsed sample GDS showing white geometry and the yellow DLP crop frame.</figcaption></figure></div><div class="tab-panel" id="gds-import-tab-1" role="tabpanel" aria-labelledby="gds-import-tab-1-button"><ul><li><code>No selected GDS geometry inside the current DLP frame.</code>: check layer/datatype and move the frame toward the geometry.</li><li><code>Geometry intersects the frame but may be smaller than one pixel.</code>: check lens scale and geometry size. Preview zoom alone does not change output pixel size.</li><li><code>Selected GDS geometry produced no visible pixels.</code>: recheck layer, crop center, and scale. Overlapping bounds can still contain no rasterized geometry.</li></ul></div></div>
+</section><section id="draw-cad" class="manual-section">
+  <div class="section-kicker">14</div>
+  <div class="section-title-row"><h2>Draw CAD</h2></div>
+  <p class="section-intro">Create dimensioned geometry on the Align View image plane.</p>
+  <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" id="draw-cad-tab-0-button" aria-controls="draw-cad-tab-0" tabindex="0" aria-selected="true" data-tab-target="draw-cad-tab-0">Tools / Controls</button><button class="tab-button" type="button" role="tab" id="draw-cad-tab-1-button" aria-controls="draw-cad-tab-1" tabindex="-1" aria-selected="false" data-tab-target="draw-cad-tab-1">Lens / Scale</button></div><div class="tab-panel active" id="draw-cad-tab-0" role="tabpanel" aria-labelledby="draw-cad-tab-0-button"><ul><li>Load an image, configure DLP, open Align Viewer > Show, then press Draw CAD. The first opening may take time while the editor loads.</li><li>Select selects, moves, and edits handles. Rect/Ellipse/Line/Polyline/Polygon create geometry.</li><li>Set dimensions and line width with W um, H um, and Stroke um. Grid Snap aligns points to the chosen micrometer interval.</li><li>Measure checks distance and angle; measurements are not exposure geometry.</li></ul><figure class="manual-figure" style="--figure-width:538px"><a href="assets/img/draw-cad-view-v2_1_5.png" target="_blank" rel="noopener" title="Open original image"><img src="assets/img/draw-cad-view-v2_1_5.png" alt="Example Draw CAD work plane." loading="lazy"></a><figcaption>Example Draw CAD work plane.</figcaption></figure><figure class="manual-figure" style="--figure-width:260px"><a href="assets/img/draw-cad-tools-v2_1_5.png" target="_blank" rel="noopener" title="Open original image"><img src="assets/img/draw-cad-tools-v2_1_5.png" alt="Geometry, dimensions, grid, and scale tools." loading="lazy"></a><figcaption>Geometry, dimensions, grid, and scale tools.</figcaption></figure></div><div class="tab-panel" id="draw-cad-tab-1" role="tabpanel" aria-labelledby="draw-cad-tab-1-button"><ul><li>Check the current lens's um/px X/Y values and save with Save Scale. Verify actual output dimensions using a reference pattern.</li><li>GDS Import also uses the lens-specific CAD scale. Recheck scale after changing lenses.</li><li>Overlay position/rotation and DLP output correction are separate stages. Check both the PNG and applied profile before output.</li></ul></div></div>
+</section><section id="cad-output" class="manual-section">
+  <div class="section-kicker">15</div>
+  <div class="section-title-row"><h2>CAD Output</h2></div>
+  <p class="section-intro">Distinguish editable documents, PNG output, pattern application, and one-shot exposure.</p>
+  <ul><li>Save CAD / Load CAD save and reopen editable .maskcad documents.</li><li>Export PNG saves a DLP-resolution PNG and paired .maskcad document. A PNG alone does not restore editable geometry.</li><li>Include Base Image combines the original pattern with CAD geometry. Check whether output should contain geometry alone or also the base image.</li><li>Apply loads the generated PNG into Pattern Settings. It does not itself turn the LED on.</li><li>Expose Now exposes the CAD output once after confirmation. Check exposure conditions and lens; Display/LED/fan/Keystone checks apply.</li><li>Canceling the save prompt or failing to save during application exit cancels exit and preserves editing state.</li></ul><figure class="manual-figure" style="--figure-width:260px"><a href="assets/img/draw-cad-output-controls-v2_1_5.png" target="_blank" rel="noopener" title="Open original image"><img src="assets/img/draw-cad-output-controls-v2_1_5.png" alt="Draw CAD output controls." loading="lazy"></a><figcaption>Draw CAD output controls.</figcaption></figure>
+</section><section id="expose-setup" class="manual-section">
+  <div class="section-kicker">16</div>
+  <div class="section-title-row"><h2>Expose Setup</h2></div>
+  <p class="section-intro">Run patterns in sequence with per-row exposure conditions.</p>
+  <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" id="expose-setup-tab-0-button" aria-controls="expose-setup-tab-0" tabindex="0" aria-selected="true" data-tab-target="expose-setup-tab-0">Buttons / Columns</button><button class="tab-button" type="button" role="tab" id="expose-setup-tab-1-button" aria-controls="expose-setup-tab-1" tabindex="-1" aria-selected="false" data-tab-target="expose-setup-tab-1">Preflight / Failures</button></div><div class="tab-panel active" id="expose-setup-tab-0" role="tabpanel" aria-labelledby="expose-setup-tab-0-button"><ul><li>Add inserts the current pattern; Delete removes selected rows. Up/Down reorder rows, and Export exports the sequence list.</li><li>File identifies the source, Exposure (ms) sets illumination duration, Rotation (deg) sets rotation, and Intensity sets output strength.</li><li>Rest (ms) sets the rest interval and Repeat sets repetition count. With LUT enabled, verify intensity units and lens.</li><li>Start runs the sequence, Next advances to the next row while waiting after a row completes, and Stop interrupts it. When Next is enabled, check sample position and other conditions before proceeding.</li></ul><figure class="manual-figure" style="--figure-width:720px"><a href="assets/img/expose-setup-v2_1_5.png" target="_blank" rel="noopener" title="Open original image"><img src="assets/img/expose-setup-v2_1_5.png" alt="Expose Setup captured wide enough to include the full table and two-line header." loading="lazy"></a><figcaption>Expose Setup captured wide enough to include the full table and two-line header.</figcaption></figure></div><div class="tab-panel" id="expose-setup-tab-1" role="tabpanel" aria-labelledby="expose-setup-tab-1-button"><ul><li>Check every row's paths and numeric settings. A missing or unreadable file blocks the entire run rather than skipping rows.</li><li>Check rotation against the output/preview that preserves original canvas size. Recheck existing rows if you changed Pattern Settings after adding them.</li><li>Resolve UV Keystone/Compensation failures, output-window faults, or LED OFF/current/fan errors before restarting.</li></ul></div></div>
+</section><section id="calibration-lut" class="manual-section">
+  <div class="section-kicker">17</div>
+  <div class="section-title-row"><h2>Calibration LUT</h2></div>
+  <p class="section-intro">Use a device- and lens-specific LUT for calibrated intensity input.</p>
+  <ul><li>Load the LUT in Setting > Expose and enable Calibration. Application is rejected if the device serial does not match.</li><li>Select the lens in Pattern Settings and check whether Pattern Settings and Sequence use % or mW/cm².</li><li>LUT maps requested irradiance to LED current; it is not real-time optical measurement and does not replace CAD scale or UV Keystone.</li><li>When changing lenses, check the LUT lens, CAD scale, and Keystone profile separately.</li></ul><figure class="manual-figure" style="--figure-width:400px"><a href="assets/img/setting-expose-v2_1_5.png" target="_blank" rel="noopener" title="Open original image"><img src="assets/img/setting-expose-v2_1_5.png" alt="Expose tab containing Calibration, Compensation, and TEST Mode." loading="lazy"></a><figcaption>Expose tab containing Calibration, Compensation, and TEST Mode.</figcaption></figure>
+</section><section id="compensation" class="manual-section">
   <div class="section-kicker">18</div>
+  <div class="section-title-row"><h2>Compensation</h2></div>
+  <p class="section-intro">Apply a mask file for spatial output compensation.</p>
+  <ul><li>Load the Compensation file under Setting > Expose and check whether compensation is enabled.</li><li>A missing or unreadable enabled file produces a warning and blocks output. Restore the file or intentionally disable compensation, then recheck conditions.</li><li>Compensation, LUT, CAD scale, and UV Keystone are different corrections. Compensation can remain enabled while UV Keystone is off.</li></ul>
+</section><section id="settings" class="manual-section">
+  <div class="section-kicker">19</div>
   <div class="section-title-row"><h2>Settings</h2></div>
-  <p class="section-intro">Settings contains device controls, DLP display selection, Align View/UV Keystone controls, exposure calibration, compensation, and TEST Mode.</p>
-  <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" aria-selected="true" data-tab-target="settings-tab-0">General</button><button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="settings-tab-1">Display</button><button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="settings-tab-2">Align View</button><button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="settings-tab-3">Expose</button></div><div class="tab-panel active" id="settings-tab-0" role="tabpanel"><figure class="manual-figure" style="--figure-width:500px"><img src="assets/img/setting-general-v2_1.png" alt="General tab: DLP Controller, Legacy PDC05, Power, Fan, and App Mode." loading="lazy"><figcaption>General tab: DLP Controller, Legacy PDC05, Power, Fan, and App Mode.</figcaption></figure></div><div class="tab-panel" id="settings-tab-1" role="tabpanel"><figure class="manual-figure" style="--figure-width:500px"><img src="assets/img/setting-display-v2_1.png" alt="Display tab: choose the DLP monitor and press Apply." loading="lazy"><figcaption>Display tab: choose the DLP monitor and press Apply.</figcaption></figure></div><div class="tab-panel" id="settings-tab-2" role="tabpanel"><figure class="manual-figure" style="--figure-width:500px"><img src="assets/img/setting-align-view-v2_1.png" alt="Align View tab: UV Keystone status plus Enable and Disable buttons." loading="lazy"><figcaption>Align View tab: UV Keystone status plus Enable and Disable buttons.</figcaption></figure></div><div class="tab-panel" id="settings-tab-3" role="tabpanel"><figure class="manual-figure" style="--figure-width:500px"><img src="assets/img/setting-expose-v2_1.png" alt="Expose tab: Anti-vibration, Calibration, Compensation, and TEST Mode." loading="lazy"><figcaption>Expose tab: Anti-vibration, Calibration, Compensation, and TEST Mode.</figcaption></figure></div></div>
+  <p class="section-intro">Five tabs: General, Display, Align View, Expose, and Help.</p>
+  <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" id="settings-tab-0-button" aria-controls="settings-tab-0" tabindex="0" aria-selected="true" data-tab-target="settings-tab-0">General</button><button class="tab-button" type="button" role="tab" id="settings-tab-1-button" aria-controls="settings-tab-1" tabindex="-1" aria-selected="false" data-tab-target="settings-tab-1">Display</button><button class="tab-button" type="button" role="tab" id="settings-tab-2-button" aria-controls="settings-tab-2" tabindex="-1" aria-selected="false" data-tab-target="settings-tab-2">Align View</button><button class="tab-button" type="button" role="tab" id="settings-tab-3-button" aria-controls="settings-tab-3" tabindex="-1" aria-selected="false" data-tab-target="settings-tab-3">Expose</button><button class="tab-button" type="button" role="tab" id="settings-tab-4-button" aria-controls="settings-tab-4" tabindex="-1" aria-selected="false" data-tab-target="settings-tab-4">Help</button></div><div class="tab-panel active" id="settings-tab-0" role="tabpanel" aria-labelledby="settings-tab-0-button"><ul><li>Check connection, device serial/version/temperature, and DLP Controller mode. Some fields are unsupported by Legacy devices.</li><li>Power ON/OFF and Fan ON/OFF are hardware commands. App Mode Dark/Light changes the UI theme.</li></ul><figure class="manual-figure" style="--figure-width:400px"><a href="assets/img/setting-general-v2_1_5.png" target="_blank" rel="noopener" title="Open original image"><img src="assets/img/setting-general-v2_1_5.png" alt="General tab. Device information depends on the connected hardware." loading="lazy"></a><figcaption>General tab. Device information depends on the connected hardware.</figcaption></figure></div><div class="tab-panel" id="settings-tab-1" role="tabpanel" aria-labelledby="settings-tab-1-button"><div class="callout">Select a monitor and validate with Apply. See <a href="#display-safety">DLP Display / Apply</a> for the full workflow and recovery.</div><figure class="manual-figure" style="--figure-width:400px"><a href="assets/img/setting-display-v2_1_5.png" target="_blank" rel="noopener" title="Open original image"><img src="assets/img/setting-display-v2_1_5.png" alt="Display tab." loading="lazy"></a><figcaption>Display tab.</figcaption></figure></div><div class="tab-panel" id="settings-tab-2" role="tabpanel" aria-labelledby="settings-tab-2-button"><div class="callout">Manage overlay position/size/rotation, Reset Align, Align Wizard, UV Keystone state, and Enable/Disable.</div><figure class="manual-figure" style="--figure-width:400px"><a href="assets/img/setting-align-view-v2_1_5.png" target="_blank" rel="noopener" title="Open original image"><img src="assets/img/setting-align-view-v2_1_5.png" alt="Align View tab." loading="lazy"></a><figcaption>Align View tab.</figcaption></figure></div><div class="tab-panel" id="settings-tab-3" role="tabpanel" aria-labelledby="settings-tab-3-button"><div class="callout">Check Anti-vibration, Calibration LUT, Compensation, and TEST Mode. Disable TEST Mode and verify real initialization before exposure.</div><figure class="manual-figure" style="--figure-width:400px"><a href="assets/img/setting-expose-v2_1_5.png" target="_blank" rel="noopener" title="Open original image"><img src="assets/img/setting-expose-v2_1_5.png" alt="Expose tab." loading="lazy"></a><figcaption>Expose tab.</figcaption></figure></div><div class="tab-panel" id="settings-tab-4" role="tabpanel" aria-labelledby="settings-tab-4-button"><div class="callout">The Help button opens the application's configured help. Check that the version at the top of this manual matches the executable being used.</div><figure class="manual-figure" style="--figure-width:400px"><a href="assets/img/setting-help-v2_1_5.png" target="_blank" rel="noopener" title="Open original image"><img src="assets/img/setting-help-v2_1_5.png" alt="Help tab." loading="lazy"></a><figcaption>Help tab.</figcaption></figure></div></div>
 </section><section id="legacy-dlp" class="manual-section">
-          <div class="section-kicker">19</div>
-          <div class="section-title-row"><h2>Legacy DLP</h2></div>
-          <p class="section-intro">Use Legacy DLP mode only for older PDC05 DLP controller environments.</p>
-          <ul>
-  <li>Location: <code>Setting &gt; General &gt; Use Legacy PDC05</code>.</li>
-  <li>The default mode is the modern DLP controller mode.</li>
-  <li>Do not switch DLP mode during exposure. Press <code>Stop</code> and return the output to a safe state first.</li>
-  <li>Some functions may be limited in Legacy mode depending on the old DLL and hardware support.</li>
-</ul>
-        </section><section id="test-mode" class="manual-section">
-          <div class="section-kicker">20</div>
-          <div class="section-title-row"><h2>TEST Mode</h2></div>
-          <p class="section-intro">TEST Mode is for UI flow checks without connected DLP hardware.</p>
-          <ol>
-  <li>Open <code>Setting</code>.</li>
-  <li>Go to the <code>Expose</code> tab.</li>
-  <li>Enable <code>TEST Mode</code>.</li>
-  <li>Check image loading, GDS Import, Align View, Draw CAD, and Expose Setup workflows.</li>
-  <li>Before real exposure, verify that TEST Mode is in the intended state.</li>
-</ol>
-        </section><section id="data-paths" class="manual-section">
-          <div class="section-kicker">21</div>
-          <div class="section-title-row"><h2>Data Paths</h2></div>
-          <p class="section-intro">These are the main user data locations used by MASKLESS LITHO.</p>
-          <div class="table-wrap"><table>
-  <thead><tr><th>Item</th><th>Location</th><th>Purpose</th></tr></thead>
-  <tbody>
-    <tr><td>Config</td><td><code>%USERPROFILE%\.maskless_v2\config\config.json</code></td><td>Display, LUT, CAD scale, UV Keystone state</td></tr>
-    <tr><td>LUT copy</td><td><code>%USERPROFILE%\.maskless_v2\config\lut.dat</code></td><td>Calibration LUT copy</td></tr>
-    <tr><td>Compensation</td><td><code>%USERPROFILE%\.maskless_v2\config\compensation.mask</code></td><td>Compensation image copy</td></tr>
-    <tr><td>Logs</td><td><code>%USERPROFILE%\.maskless_v2\logs\</code></td><td>app_info.log and app_error.log</td></tr>
-    <tr><td>CAD/GDS PNG</td><td><code>%USERPROFILE%\.maskless_v2\cad\</code></td><td>Default output for CAD and converted GDS PNG files</td></tr>
-    <tr><td>UV Keystone</td><td><code>%USERPROFILE%\.maskless_v2\keystone\*.maskkeystone</code></td><td>Full-field correction profiles</td></tr>
-  </tbody>
-</table></div>
-        </section><section id="troubleshooting" class="manual-section">
-          <div class="section-kicker">22</div>
-          <div class="section-title-row"><h2>Troubleshooting</h2></div>
-          <p class="section-intro">Start with Stop, the DLP display selection, TEST Mode, UV Keystone state, scale profiles, and logs.</p>
-          <div class="table-wrap"><table>
-  <thead><tr><th>Symptom</th><th>Likely cause</th><th>What to do</th></tr></thead>
-  <tbody>
-    <tr><td>No DLP output</td><td>Display not applied, TEST Mode, hardware connection</td><td>Apply the DLP display, check TEST Mode, then review logs</td></tr>
-    <tr><td>LED ON does not apply correction</td><td>UV Keystone OFF, no profile, or profile resolution mismatch</td><td>Check that Setting > Align View shows APPLIED (ON) and a 1920 x 1080 profile</td></tr>
-    <tr><td>LED ON stops with a UV Keystone warning</td><td>Correction failed or profile resolution mismatch</td><td>Check 1920 x 1080 DLP display, profile status, and app_error.log</td></tr>
-    <tr><td>GDS output is blank</td><td>Geometry outside crop frame or wrong scale</td><td>Move the yellow frame and confirm Frame check</td></tr>
-    <tr><td>Draw CAD will not open</td><td>No image, no DLP display, or Align View not open</td><td>Load an image, apply Display, press Align Viewer Show</td></tr>
-    <tr><td>Motorized Focus will not open</td><td>Sequence, CAD exposure, or manual LED output is active</td><td>Press Stop or LED OFF first</td></tr>
-    <tr><td>Intensity units look wrong</td><td>Calibration LUT state changed</td><td>Check Calibration and lens selection in Setting > Expose</td></tr>
-  </tbody>
-</table></div>
-        </section><section id="release-notes" class="manual-section">
-          <div class="section-kicker">23</div>
-          <div class="section-title-row"><h2>Release Notes v2.1</h2></div>
-          <p class="section-intro">The English manual reflects these current release behaviors.</p>
-          <ul>
-  <li>Release build: <code>maskless_v2_1.exe</code>.</li>
-  <li>GDS Import, UV Keystone, Motorized Focus, and manual LED stability updates are included in the v2.1 stable release.</li>
-  <li><code>LED ON</code> applies UV Keystone correction when the profile is enabled, and uses raw output when correction is disabled or unavailable.</li>
-  <li>Manual LED status now shows <code>Manual LED starting...</code>, then <code>Manual exposing... 0.000s</code> after LED ON succeeds.</li>
-  <li>UV Keystone correction failure stops before LED ON and shows a warning.</li>
-  <li>UV Keystone Calibration now guards the DLP monitor and main/camera monitor native resolutions before starting.</li>
-  <li>GDS Import Settings adds an interactive DLP crop frame, Crop center X/Y, Zoom In/Out, Fit View, and Center Frame on GDS.</li>
-  <li>UV Keystone status uses <code>APPLIED (ON)</code> and <code>NOT APPLIED (OFF)</code>.</li>
-  <li><code>Enable UV Keystone</code> and <code>Disable UV Keystone</code> toggle correction without deleting the saved profile.</li>
-  <li><code>Clear UV Keystone</code> is no longer shown in the normal operator screen.</li>
-  <li>Align Wizard now emphasizes UV Keystone Calibration, Import, and Export, with manual Align controls under Advanced.</li>
-</ul>
-        </section></main>
+  <div class="section-kicker">20</div>
+  <div class="section-title-row"><h2>Legacy DLP</h2></div>
+  <p class="section-intro">Select compatibility mode only for the older PDC05 controller.</p>
+  <ul><li>Use Setting > General > Use Legacy PDC05. Stop all output, select the mode matching the hardware, and reinitialize.</li><li>Check Legacy driver: Ready. Unsupported version/temperature fields may be marked unavailable.</li><li>Manual illumination is blocked in both Modern and Legacy modes if current readback is missing or mismatched. Do not select a different controller mode just to bypass an error.</li></ul>
+</section><section id="test-mode" class="manual-section">
+  <div class="section-kicker">21</div>
+  <div class="section-title-row"><h2>TEST Mode</h2></div>
+  <p class="section-intro">Use this mode to inspect UI and workflows without hardware.</p>
+  <ul><li>Enable Setting > Expose > TEST Mode to inspect image/GDS/Align View/CAD/Sequence workflows. Display resolution and monitor requirements still need checking.</li><li>TEST Initialize does not prove real-device initialization or resolve a real initialization failure. TEST first-projection confirmation is not recorded as real-device confirmation.</li><li>TEST Mode is not a complete hardware-disconnection setting. Do not assume General's manual Power/Fan commands are all simulated.</li><li>Cleanup originating from real output is not skipped by switching to TEST Mode. Before returning to real exposure, turn TEST Mode off and recheck Initialize and Display Apply.</li></ul>
+</section><section id="data-paths" class="manual-section">
+  <div class="section-kicker">22</div>
+  <div class="section-title-row"><h2>Data Paths</h2></div>
+  <p class="section-intro">Back up user data and correction profiles before updating.</p>
+  <div class="table-wrap"><table><thead><tr><th>Item</th><th>Default Location</th></tr></thead><tbody><tr><td>Config</td><td><code>%USERPROFILE%\.maskless_v2\config\config.json</code></td></tr><tr><td>LUT</td><td><code>%USERPROFILE%\.maskless_v2\config\lut.dat</code></td></tr><tr><td>Compensation</td><td><code>%USERPROFILE%\.maskless_v2\config\compensation.mask</code></td></tr><tr><td>Logs</td><td><code>%USERPROFILE%\.maskless_v2\logs\</code></td></tr><tr><td>CAD / GDS PNG</td><td><code>%USERPROFILE%\.maskless_v2\cad\</code></td></tr><tr><td>UV Keystone</td><td><code>%USERPROFILE%\.maskless_v2\keystone\*.maskkeystone</code></td></tr></tbody></table></div><div class="callout">Settings and Keystone profiles use atomic replacement. Resolve save failures and save again. For exported CAD/PNG/Sequence files, check the location chosen in the save dialog.</div>
+</section><section id="troubleshooting" class="manual-section">
+  <div class="section-kicker">23</div>
+  <div class="section-title-row"><h2>Troubleshooting</h2></div>
+  <p class="section-intro">Check messages alongside the physical device state.</p>
+  <div class="table-wrap"><table><thead><tr><th>Symptom</th><th>Checks / Action</th></tr></thead><tbody><tr><td>LED preparation does not finish</td><td>Check USB, Initialize, readiness, and current readback. The 5-second deadline is software-based; DLL delays can also delay cancellation.</td></tr><tr><td>Dialog remains after ON</td><td>It is waiting for first-projection confirmation. Select Pattern visible only after observing the pattern; otherwise stop with LED OFF / Cancel and investigate.</td></tr><tr><td>Output stops after 30 seconds</td><td>Check whether automatic shutdown was requested because the first ON response was not confirmed.</td></tr><tr><td>Apply is blocked</td><td>End preparation, illumination, exposure, and pending confirmation. Resolve OFF/current-zero errors, then apply again.</td></tr><tr><td>No output / display lost</td><td>Check USB and video connections separately. Verify 1920x1080 / 100%, the selected DLP, initialization, and TEST Mode; revalidate with Display Apply.</td></tr><tr><td>Keystone application blocked</td><td>Check the profile against the current lens, DLP identity, and resolution. A profile from another device may require recalibration.</td></tr><tr><td>Empty GDS PNG</td><td>Check layer/datatype, yellow crop frame, CAD scale, and actual pixel presence in Frame check.</td></tr><tr><td>Sequence will not start</td><td>Verify that all row files exist and are readable. Check safety errors, correction files, and exposure conditions.</td></tr><tr><td>Motorized Focus button absent</td><td>This is expected in v2.1.5 standard edition. The former embedded launch option is unavailable.</td></tr><tr><td>Exit is blocked</td><td>Check for remaining LED OFF/current/fan errors. A canceled or failed CAD save intentionally keeps editing open.</td></tr><tr><td>Intensity units / LUT errors</td><td>Check Calibration ON/OFF, lens selection, and LUT/device serial matching.</td></tr></tbody></table></div>
+</section><section id="release-notes" class="manual-section">
+  <div class="section-kicker">24</div>
+  <div class="section-title-row"><h2>Release Notes v2.1.5</h2></div>
+  <p class="section-intro">Changes since v2.1 that affect operation.</p>
+  <div class="tabs"><div class="tab-list" role="tablist"><button class="tab-button active" type="button" role="tab" id="release-notes-tab-0-button" aria-controls="release-notes-tab-0" tabindex="0" aria-selected="true" data-tab-target="release-notes-tab-0">v2.1.5</button><button class="tab-button" type="button" role="tab" id="release-notes-tab-1-button" aria-controls="release-notes-tab-1" tabindex="-1" aria-selected="false" data-tab-target="release-notes-tab-1">v2.1.4</button><button class="tab-button" type="button" role="tab" id="release-notes-tab-2-button" aria-controls="release-notes-tab-2" tabindex="-1" aria-selected="false" data-tab-target="release-notes-tab-2">v2.1.2-2.1.3 / Cumulative</button></div><div class="tab-panel active" id="release-notes-tab-0" role="tabpanel" aria-labelledby="release-notes-tab-0-button"><ul><li>Display Apply is blocked during output and saves selection only after validating LED OFF/current-zero readback and the black output window.</li><li>First manual ON uses a central preparation dialog and Pattern visible confirmation. Missing confirmation for 30 seconds after ON response requests shutdown.</li><li>The live output window is rechecked immediately before LED ON, including Sequence, CAD Expose Now, and UV Keystone.</li><li>Initialize Power ON failures remain visible; cancellation, late-response handling, retries, and fan recovery are strengthened.</li></ul></div><div class="tab-panel" id="release-notes-tab-1" role="tabpanel" aria-labelledby="release-notes-tab-1-button"><ul><li>Motorized Focus and its SDK/communication dependencies are excluded from the standard edition. Draw CAD loads on demand; Fast Portable is available.</li><li>Improved LED preparation feedback, USB/readiness/current checks, immediate black output on OFF, CAD save cancellation, and idle disconnected exit.</li></ul></div><div class="tab-panel" id="release-notes-tab-2" role="tabpanel" aria-labelledby="release-notes-tab-2-button"><ul><li>Introduced DLP 1920x1080 / 100% policy, persisted screen identity, and guards for display loss/scaling changes.</li><li>Improved 2/4 Point alignment and rotation synchronization, lens/DLP Keystone compatibility, reduced GDS reparsing, and actual-raster checks.</li><li>Added retained LED OFF/current/fan faults, invalidation of delayed callbacks, atomic settings saves, and guards for Sequence-file and Compensation errors.</li></ul></div></div><p><a href="https://github.com/PLANCK-INC/MASKLESSLITHO/releases/tag/v2.1.5">Official release notes and downloads</a></p>
+</section></main>
           </div>
           <script>
 const navLinks=[...document.querySelectorAll('.nav a')];
 const sections=[...document.querySelectorAll('section[id]')];
-const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id));}});},{rootMargin:'-20% 0px -70% 0px',threshold:0});
-sections.forEach(section=>observer.observe(section));
-document.querySelectorAll('.tabs').forEach(tabs=>{const buttons=[...tabs.querySelectorAll('.tab-button')]; const panels=[...tabs.querySelectorAll('.tab-panel')]; buttons.forEach((button,index)=>{button.addEventListener('click',()=>{buttons.forEach((item,itemIndex)=>{const active=itemIndex===index; item.classList.toggle('active',active); item.setAttribute('aria-selected',active?'true':'false');}); panels.forEach((panel,panelIndex)=>panel.classList.toggle('active',panelIndex===index));});});});
+const mobileSelect=document.getElementById('mobileSelect');
+let navigationPending=false;
+function syncNavigation(){
+  navigationPending=false;
+  const current=sections.filter(section=>section.getBoundingClientRect().top<=112).at(-1)||sections[0];
+  if(!current)return;
+  navLinks.forEach(link=>{const active=link.hash==='#'+current.id;link.classList.toggle('active',active);if(active)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});
+  if(mobileSelect)mobileSelect.value='#'+current.id;
+}
+function queueNavigation(){if(!navigationPending){navigationPending=true;requestAnimationFrame(syncNavigation);}}
+window.addEventListener('scroll',queueNavigation,{passive:true});
+window.addEventListener('resize',queueNavigation);
+window.addEventListener('load',queueNavigation);
+syncNavigation();
+document.querySelectorAll('.tabs').forEach(tabs=>{const buttons=[...tabs.querySelectorAll('.tab-button')]; const panels=[...tabs.querySelectorAll('.tab-panel')]; buttons.forEach((button,index)=>{button.addEventListener('click',()=>{buttons.forEach((item,itemIndex)=>{const active=itemIndex===index; item.classList.toggle('active',active); item.setAttribute('aria-selected',active?'true':'false'); item.tabIndex=active?0:-1;}); panels.forEach((panel,panelIndex)=>panel.classList.toggle('active',panelIndex===index));});});});
+document.querySelectorAll('.tab-list').forEach(list=>list.addEventListener('keydown',event=>{const keys=['ArrowLeft','ArrowRight','Home','End'];if(!keys.includes(event.key))return;event.preventDefault();const buttons=[...list.querySelectorAll('.tab-button')];let i=buttons.indexOf(document.activeElement);if(i<0)return;i=event.key==='Home'?0:event.key==='End'?buttons.length-1:(i+(event.key==='ArrowRight'?1:-1)+buttons.length)%buttons.length;buttons[i].click();buttons[i].focus();}));
 document.getElementById('mobileSelect')?.addEventListener('change',event=>{location.hash=event.target.value;});
 </script>
         </body>
